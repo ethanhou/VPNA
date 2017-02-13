@@ -38,6 +38,12 @@
     }];
     [self setBaseNavigationClearStyle];
     [self setLeftBarButtonWithImageName:@"back"];
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tap)];
+    [self.view addGestureRecognizer:tap];
+}
+- (void)tap
+{
+    [self.view endEditing:YES];
 }
 
 - (void)setBaseNavigationClearStyle
@@ -90,8 +96,20 @@
 
 - (void)onBackButtonItemAction:(UIButton *)sender
 {
-    
+    [self.navigationController popViewControllerAnimated:YES];
 }
+
+- (UIImage *)imageFromColor:(UIColor *)color {
+    CGRect rect = CGRectMake(0, 0, 1, 1);
+    UIGraphicsBeginImageContext(rect.size);
+    CGContextRef context = UIGraphicsGetCurrentContext();
+    CGContextSetFillColorWithColor(context, color.CGColor);
+    CGContextFillRect(context, rect);
+    UIImage *image = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    return image;
+}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

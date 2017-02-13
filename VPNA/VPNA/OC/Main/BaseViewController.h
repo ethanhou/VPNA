@@ -17,11 +17,12 @@
 - (instancetype)initWithOffsetX:(float)_offsetX textInset:(float)_inset;
 @end
 
-@interface BaseViewController : UIViewController
+@interface BaseViewController : UIViewController<UITextFieldDelegate>
 
 @property(nonatomic,strong)UIImageView *bgView;
 @property(nonatomic,strong)UIImageView *logoView;
 
+- (UIImage *)imageFromColor:(UIColor *)color;
 - (void)onBackButtonItemAction:(UIButton *)sender;
 - (void)setLeftBarButtonWithImageName:(NSString *)imaName;
 - (void)setLeftBarButtonWithButton:(UIButton *)button;

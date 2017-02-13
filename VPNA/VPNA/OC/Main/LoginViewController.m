@@ -7,10 +7,10 @@
 //
 
 #import "LoginViewController.h"
+#import "RegisterViewController.h"
 
 
-
-@interface LoginViewController ()<UITextFieldDelegate>
+@interface LoginViewController ()
 
 @property(nonatomic,strong)UIView *alphView;
 @property(nonatomic,strong)CustomTextField *phoneField;
@@ -30,19 +30,15 @@
     [self.view addSubview:_alphView];
     [_alphView mas_makeConstraints:^(MASConstraintMaker *make){
         
-        make.left.mas_offset(30);
-        make.right.mas_offset(-30);
+        make.left.mas_offset(20);
+        make.right.mas_offset(-20);
         make.height.mas_equalTo(300);
         make.top.equalTo(self.logoView.mas_bottom).mas_offset(40);
     }];
     [self initInterface];
-    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(tap)];
-    [self.view addGestureRecognizer:tap];
+
 }
-- (void)tap
-{
-    [self.view endEditing:YES];
-}
+
 
 - (void)initInterface
 {
@@ -162,6 +158,8 @@
 - (void)clickedRegister:(UIButton *)sender
 {
     NSLog(@"注册");
+    RegisterViewController *registerCtr = [[RegisterViewController alloc] init];
+    [self.navigationController pushViewController:registerCtr animated:YES];
 }
 - (void)clickedForget:(UIButton *)sender
 {
