@@ -9,6 +9,8 @@
 #import "AppDelegate.h"
 #import "QWTabBarController.h"
 #import "AFNetworking.h"
+#import "LoginViewController.h"
+
 @interface AppDelegate ()
 
 @end
@@ -18,8 +20,10 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
      self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
-    QWTabBarController *tabBar = [[QWTabBarController alloc] init];
-    self.window.rootViewController = tabBar;
+    
+    LoginViewController *loginCtr = [[LoginViewController alloc] init];
+    UINavigationController *navi = [[UINavigationController alloc] initWithRootViewController:loginCtr];
+    self.window.rootViewController = navi;
     [self.window makeKeyAndVisible];
     return YES;
 }
