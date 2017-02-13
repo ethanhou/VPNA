@@ -1,0 +1,441 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		138FB90E1E0F97E300D7A392 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 138FB90D1E0F97E300D7A392 /* main.m */; };
+		138FB9111E0F97E300D7A392 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 138FB9101E0F97E300D7A392 /* AppDelegate.m */; };
+		138FB9151E0F97E300D7A392 /* CommonlyConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 138FB9141E0F97E300D7A392 /* CommonlyConst.m */; };
+		138FB9171E0F97E300D7A392 /* VPNAPrefixHeader.pch in Resources */ = {isa = PBXBuildFile; fileRef = 138FB9161E0F97E300D7A392 /* VPNAPrefixHeader.pch */; };
+		138FB91B1E0F97E300D7A392 /* QWBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 138FB91A1E0F97E300D7A392 /* QWBaseViewController.m */; };
+		138FB91E1E0F97E300D7A392 /* QWNavitionController.m in Sources */ = {isa = PBXBuildFile; fileRef = 138FB91D1E0F97E300D7A392 /* QWNavitionController.m */; };
+		138FB9231E0F97E300D7A392 /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 138FB9221E0F97E300D7A392 /* UIView+Extension.m */; };
+		138FB9251E0F97E300D7A392 /* QWTabBarController.m in Sources */ = {isa = PBXBuildFile; fileRef = 138FB9241E0F97E300D7A392 /* QWTabBarController.m */; };
+		138FB9281E0F97E300D7A392 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 138FB9271E0F97E300D7A392 /* Assets.xcassets */; };
+		138FB9351E0F9E5200D7A392 /* PackagesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 138FB9341E0F9E5200D7A392 /* PackagesViewController.m */; };
+		4B98C902D9E84DAD2AB5A856 /* libPods-VPNA.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 71D913A347324C870EFE15C6 /* libPods-VPNA.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		138FB9091E0F97E300D7A392 /* VPNA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VPNA.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		138FB90D1E0F97E300D7A392 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		138FB90F1E0F97E300D7A392 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		138FB9101E0F97E300D7A392 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		138FB9131E0F97E300D7A392 /* CommonlyConst.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CommonlyConst.h; path = OC/Other/CommonlyConst.h; sourceTree = "<group>"; };
+		138FB9141E0F97E300D7A392 /* CommonlyConst.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = CommonlyConst.m; path = OC/Other/CommonlyConst.m; sourceTree = "<group>"; };
+		138FB9161E0F97E300D7A392 /* VPNAPrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = VPNAPrefixHeader.pch; path = OC/Other/VPNAPrefixHeader.pch; sourceTree = "<group>"; };
+		138FB9191E0F97E300D7A392 /* QWBaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = QWBaseViewController.h; path = OC/Base/QWBaseViewController.h; sourceTree = "<group>"; };
+		138FB91A1E0F97E300D7A392 /* QWBaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = QWBaseViewController.m; path = OC/Base/QWBaseViewController.m; sourceTree = "<group>"; };
+		138FB91C1E0F97E300D7A392 /* QWNavitionController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = QWNavitionController.h; path = OC/Base/QWNavitionController.h; sourceTree = "<group>"; };
+		138FB91D1E0F97E300D7A392 /* QWNavitionController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = QWNavitionController.m; path = OC/Base/QWNavitionController.m; sourceTree = "<group>"; };
+		138FB91F1E0F97E300D7A392 /* QWTabBarController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = QWTabBarController.h; path = OC/Base/QWTabBarController.h; sourceTree = "<group>"; };
+		138FB9211E0F97E300D7A392 /* UIView+Extension.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = "UIView+Extension.h"; path = "OC/Extension/UIView+Extension.h"; sourceTree = "<group>"; };
+		138FB9221E0F97E300D7A392 /* UIView+Extension.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = "UIView+Extension.m"; path = "OC/Extension/UIView+Extension.m"; sourceTree = "<group>"; };
+		138FB9241E0F97E300D7A392 /* QWTabBarController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; name = QWTabBarController.m; path = OC/Base/QWTabBarController.m; sourceTree = "<group>"; };
+		138FB9261E0F97E300D7A392 /* CommonlyMacro.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = CommonlyMacro.h; path = OC/Other/CommonlyMacro.h; sourceTree = "<group>"; };
+		138FB9271E0F97E300D7A392 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		138FB92C1E0F97E300D7A392 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		138FB9331E0F9E5200D7A392 /* PackagesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PackagesViewController.h; sourceTree = "<group>"; };
+		138FB9341E0F9E5200D7A392 /* PackagesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PackagesViewController.m; sourceTree = "<group>"; };
+		1DCDE4AA257578A2D0192EAB /* Pods-VPNA.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VPNA.release.xcconfig"; path = "Pods/Target Support Files/Pods-VPNA/Pods-VPNA.release.xcconfig"; sourceTree = "<group>"; };
+		35CF9B9272EC61A652ACC269 /* Pods-VPNA.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VPNA.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VPNA/Pods-VPNA.debug.xcconfig"; sourceTree = "<group>"; };
+		71D913A347324C870EFE15C6 /* libPods-VPNA.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-VPNA.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		138FB9061E0F97E300D7A392 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4B98C902D9E84DAD2AB5A856 /* libPods-VPNA.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		138FB9001E0F97E300D7A392 = {
+			isa = PBXGroup;
+			children = (
+				138FB90B1E0F97E300D7A392 /* VPNA */,
+				138FB90A1E0F97E300D7A392 /* Products */,
+				6F6DC03C57F9AB7AF2B213F7 /* Pods */,
+				8F9A2E0B199409C7209F1958 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		138FB90A1E0F97E300D7A392 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				138FB9091E0F97E300D7A392 /* VPNA.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		138FB90B1E0F97E300D7A392 /* VPNA */ = {
+			isa = PBXGroup;
+			children = (
+				138FB90F1E0F97E300D7A392 /* AppDelegate.h */,
+				138FB9101E0F97E300D7A392 /* AppDelegate.m */,
+				138FB9271E0F97E300D7A392 /* Assets.xcassets */,
+				138FB92C1E0F97E300D7A392 /* Info.plist */,
+				138FB9121E0F97E300D7A392 /* Other */,
+				138FB9181E0F97E300D7A392 /* Base */,
+				138FB9321E0F9DEF00D7A392 /* Controllers */,
+				138FB9201E0F97E300D7A392 /* Extension */,
+				138FB90C1E0F97E300D7A392 /* Supporting Files */,
+			);
+			path = VPNA;
+			sourceTree = "<group>";
+		};
+		138FB90C1E0F97E300D7A392 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				138FB90D1E0F97E300D7A392 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		138FB9121E0F97E300D7A392 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				138FB9131E0F97E300D7A392 /* CommonlyConst.h */,
+				138FB9141E0F97E300D7A392 /* CommonlyConst.m */,
+				138FB9161E0F97E300D7A392 /* VPNAPrefixHeader.pch */,
+				138FB9261E0F97E300D7A392 /* CommonlyMacro.h */,
+			);
+			name = Other;
+			sourceTree = "<group>";
+		};
+		138FB9181E0F97E300D7A392 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				138FB9191E0F97E300D7A392 /* QWBaseViewController.h */,
+				138FB91A1E0F97E300D7A392 /* QWBaseViewController.m */,
+				138FB91C1E0F97E300D7A392 /* QWNavitionController.h */,
+				138FB91D1E0F97E300D7A392 /* QWNavitionController.m */,
+				138FB91F1E0F97E300D7A392 /* QWTabBarController.h */,
+				138FB9241E0F97E300D7A392 /* QWTabBarController.m */,
+			);
+			name = Base;
+			sourceTree = "<group>";
+		};
+		138FB9201E0F97E300D7A392 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				138FB9211E0F97E300D7A392 /* UIView+Extension.h */,
+				138FB9221E0F97E300D7A392 /* UIView+Extension.m */,
+			);
+			name = Extension;
+			sourceTree = "<group>";
+		};
+		138FB9321E0F9DEF00D7A392 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				138FB9331E0F9E5200D7A392 /* PackagesViewController.h */,
+				138FB9341E0F9E5200D7A392 /* PackagesViewController.m */,
+			);
+			name = Controllers;
+			path = OC/Main;
+			sourceTree = "<group>";
+		};
+		6F6DC03C57F9AB7AF2B213F7 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				35CF9B9272EC61A652ACC269 /* Pods-VPNA.debug.xcconfig */,
+				1DCDE4AA257578A2D0192EAB /* Pods-VPNA.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		8F9A2E0B199409C7209F1958 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				71D913A347324C870EFE15C6 /* libPods-VPNA.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		138FB9081E0F97E300D7A392 /* VPNA */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 138FB92F1E0F97E300D7A392 /* Build configuration list for PBXNativeTarget "VPNA" */;
+			buildPhases = (
+				520693C08E319A5CDE219125 /* [CP] Check Pods Manifest.lock */,
+				138FB9051E0F97E300D7A392 /* Sources */,
+				138FB9061E0F97E300D7A392 /* Frameworks */,
+				138FB9071E0F97E300D7A392 /* Resources */,
+				AE344B99E0E44BC73E628847 /* [CP] Embed Pods Frameworks */,
+				97B76E6D3ABBAA9567CC292F /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = VPNA;
+			productName = VPNA;
+			productReference = 138FB9091E0F97E300D7A392 /* VPNA.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		138FB9011E0F97E300D7A392 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = Houyushen;
+				TargetAttributes = {
+					138FB9081E0F97E300D7A392 = {
+						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = U6X32JP949;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 138FB9041E0F97E300D7A392 /* Build configuration list for PBXProject "VPNA" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 138FB9001E0F97E300D7A392;
+			productRefGroup = 138FB90A1E0F97E300D7A392 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				138FB9081E0F97E300D7A392 /* VPNA */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		138FB9071E0F97E300D7A392 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				138FB9281E0F97E300D7A392 /* Assets.xcassets in Resources */,
+				138FB9171E0F97E300D7A392 /* VPNAPrefixHeader.pch in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		520693C08E319A5CDE219125 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		97B76E6D3ABBAA9567CC292F /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-VPNA/Pods-VPNA-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AE344B99E0E44BC73E628847 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-VPNA/Pods-VPNA-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		138FB9051E0F97E300D7A392 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				138FB9231E0F97E300D7A392 /* UIView+Extension.m in Sources */,
+				138FB9351E0F9E5200D7A392 /* PackagesViewController.m in Sources */,
+				138FB9251E0F97E300D7A392 /* QWTabBarController.m in Sources */,
+				138FB9111E0F97E300D7A392 /* AppDelegate.m in Sources */,
+				138FB9151E0F97E300D7A392 /* CommonlyConst.m in Sources */,
+				138FB90E1E0F97E300D7A392 /* main.m in Sources */,
+				138FB91B1E0F97E300D7A392 /* QWBaseViewController.m in Sources */,
+				138FB91E1E0F97E300D7A392 /* QWNavitionController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		138FB92D1E0F97E300D7A392 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		138FB92E1E0F97E300D7A392 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		138FB9301E0F97E300D7A392 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 35CF9B9272EC61A652ACC269 /* Pods-VPNA.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				DEVELOPMENT_TEAM = U6X32JP949;
+				GCC_PREFIX_HEADER = VPNA/OC/Other/VPNAPrefixHeader.pch;
+				INFOPLIST_FILE = VPNA/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ethan.VPNA;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		138FB9311E0F97E300D7A392 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1DCDE4AA257578A2D0192EAB /* Pods-VPNA.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				DEVELOPMENT_TEAM = U6X32JP949;
+				GCC_PREFIX_HEADER = VPNA/OC/Other/VPNAPrefixHeader.pch;
+				INFOPLIST_FILE = VPNA/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = ethan.VPNA;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		138FB9041E0F97E300D7A392 /* Build configuration list for PBXProject "VPNA" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				138FB92D1E0F97E300D7A392 /* Debug */,
+				138FB92E1E0F97E300D7A392 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		138FB92F1E0F97E300D7A392 /* Build configuration list for PBXNativeTarget "VPNA" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				138FB9301E0F97E300D7A392 /* Debug */,
+				138FB9311E0F97E300D7A392 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 138FB9011E0F97E300D7A392 /* Project object */;
+}
