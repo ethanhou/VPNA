@@ -1,26 +1,27 @@
 //
-//  RegisterViewController.m
+//  ResetPwdViewController.m
 //  VPNA
 //
-//  Created by 龙章辉 on 2017/2/13.
+//  Created by 龙章辉 on 2017/2/14.
 //  Copyright © 2017年 Houyushen. All rights reserved.
 //
 
-#import "RegisterViewController.h"
+#import "ResetPwdViewController.h"
 
-@interface RegisterViewController ()
+@interface ResetPwdViewController ()
 
 @property(nonatomic,strong)UIView *alphView;
 @property(nonatomic,strong)CustomTextField *phoneField;
 @property(nonatomic,strong)CustomTextField *passwordField;
 @property(nonatomic,strong)CustomTextField *authCodeField;
 @property(nonatomic,strong)UIButton *codeTimeBtn;
-@property(nonatomic,strong)UIButton *registerBtn;
+@property(nonatomic,strong)UIButton *resetPwdBtn;
 @property(nonatomic,assign)BOOL resetCodeTime;
+
 
 @end
 
-@implementation RegisterViewController
+@implementation ResetPwdViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -36,66 +37,102 @@
     }];
     [self initInterface];
 }
+
 - (void)initInterface
 {
     _phoneField = [self createTextField:@"请输入手机号"
-                      withLeftImageName:@"phone_icon-2"];
+                      withLeftImageName:@"phone_icon-1"];
     [_alphView addSubview:_phoneField];
     
+    UIView *lineView = [[UIView alloc] init];
+    [lineView setBackgroundColor:RGB(235, 236, 238)];
+    [_alphView addSubview:lineView];
+
     _passwordField = [self createTextField:@"请输入密码"
-                         withLeftImageName:@"password_icon-2"];
+                         withLeftImageName:@"password_icon-1"];
     [_alphView addSubview:_passwordField];
     
+    UIView *lineView2 = [[UIView alloc] init];
+    [lineView2 setBackgroundColor:RGB(235, 236, 238)];
+    [_alphView addSubview:lineView2];
+
     _authCodeField = [self createTextField:@"请输入验证码"
-                         withLeftImageName:@"authcode_icon-2"];
+                         withLeftImageName:@"authcode_icon-1"];
     [_alphView addSubview:_authCodeField];
+    
     
     _codeTimeBtn = [UIButton buttonWithType:UIButtonTypeCustom];
     [_codeTimeBtn setTitle:@"获取验证码" forState:UIControlStateNormal];
-    [_codeTimeBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    [_codeTimeBtn setTitleColor:[UIColor grayColor] forState:UIControlStateNormal];
+    [_codeTimeBtn setBackgroundColor:[UIColor whiteColor]];
     _codeTimeBtn.titleLabel.font = [UIFont systemFontOfSize:12.0];
     [_codeTimeBtn addTarget:self action:@selector(clickedRightCodeTimeBtn:) forControlEvents:UIControlEventTouchUpInside];
     [_alphView addSubview:_codeTimeBtn];
     
-    _registerBtn = [UIButton buttonWithType:UIButtonTypeCustom];
-    [_registerBtn setTitle:@"注册" forState:UIControlStateNormal];
-    [_registerBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-    _registerBtn.titleLabel.font = [UIFont systemFontOfSize:16.0];
-    _registerBtn.layer.cornerRadius = 4;
-    [_registerBtn setBackgroundColor:RGB(93, 94, 105)];
-    [_registerBtn addTarget:self action:@selector(clickedRegister:) forControlEvents:UIControlEventTouchUpInside];
-    [_alphView addSubview:_registerBtn];
+    UIView *lineView3 = [[UIView alloc] init];
+    [lineView3 setBackgroundColor:RGB(235, 236, 238)];
+    [_alphView addSubview:lineView3];
     
+    _resetPwdBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    [_resetPwdBtn setTitle:@"重置密码" forState:UIControlStateNormal];
+    [_resetPwdBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    _resetPwdBtn.titleLabel.font = [UIFont systemFontOfSize:16.0];
+    _resetPwdBtn.layer.cornerRadius = 4;
+    [_resetPwdBtn setBackgroundColor:RGB(93, 94, 105)];
+    [_resetPwdBtn addTarget:self action:@selector(clickedResetPwd:) forControlEvents:UIControlEventTouchUpInside];
+    [_alphView addSubview:_resetPwdBtn];
+
     [_phoneField mas_makeConstraints:^(MASConstraintMaker *make){
         
         make.left.mas_offset(20);
         make.right.mas_offset(-20);
         make.top.mas_offset(40);
-        make.height.mas_equalTo(40);
+        make.height.mas_equalTo(45);
+    }];
+    [lineView mas_makeConstraints:^(MASConstraintMaker *make){
+        
+        make.top.equalTo(_phoneField.mas_bottom);
+        make.left.equalTo(_phoneField.mas_left);
+        make.right.equalTo(_phoneField.mas_right);
+        make.height.mas_equalTo(1);
     }];
     [_passwordField mas_makeConstraints:^(MASConstraintMaker *make){
         
-        make.top.equalTo(_phoneField.mas_bottom).mas_offset(20);
+        make.top.equalTo(lineView.mas_bottom);
         make.left.equalTo(_phoneField.mas_left);
         make.right.equalTo(_phoneField.mas_right);
         make.height.equalTo(_phoneField.mas_height);
+    }];
+    [lineView2 mas_makeConstraints:^(MASConstraintMaker *make){
+        
+        make.top.equalTo(_passwordField.mas_bottom);
+        make.left.equalTo(_phoneField.mas_left);
+        make.right.equalTo(_phoneField.mas_right);
+        make.height.mas_equalTo(1);
     }];
     [_authCodeField mas_makeConstraints:^(MASConstraintMaker *make){
         
-        make.top.equalTo(_passwordField.mas_bottom).mas_offset(20);
+        make.top.equalTo(lineView2.mas_bottom);
         make.left.equalTo(_phoneField.mas_left);
-        make.right.equalTo(_codeTimeBtn.mas_left).mas_offset(-10);
+        make.right.equalTo(_codeTimeBtn.mas_left);
         make.height.equalTo(_phoneField.mas_height);
+    }];
+    [lineView3 mas_makeConstraints:^(MASConstraintMaker *make){
+        
+        make.centerY.equalTo(_authCodeField.mas_centerY);
+        make.left.equalTo(_authCodeField.mas_right);
+        make.width.mas_equalTo(1);
+        make.height.mas_equalTo(30);
     }];
     [_codeTimeBtn mas_makeConstraints:^(MASConstraintMaker *make){
         
-        make.centerY.equalTo(_authCodeField.mas_centerY);
+        make.top.equalTo(lineView2.mas_bottom);
+        make.left.equalTo(_authCodeField.mas_right);
         make.right.equalTo(_phoneField.mas_right);
-        make.left.equalTo(_authCodeField.mas_right).mas_offset(10);
-        make.width.mas_equalTo(70);
+        make.width.mas_equalTo(90);
+        make.height.equalTo(_phoneField.mas_height);
     }];
-    
-    [_registerBtn mas_makeConstraints:^(MASConstraintMaker *make){
+    [_resetPwdBtn mas_makeConstraints:^(MASConstraintMaker *make){
         
         make.centerX.mas_offset(0);
         make.top.equalTo(_authCodeField.mas_bottom).mas_offset(40);
@@ -104,30 +141,29 @@
     }];
 }
 
+- (void)clickedResetPwd:(UIButton *)sender
+{
+    NSLog(@"重置密码");
+}
+
 - (CustomTextField *)createTextField:(NSString *)placeString withLeftImageName:(NSString *)imaName
 {
     UIImage *ima = [UIImage imageNamed:imaName];
     UIImageView *_leftView = [[UIImageView alloc] init];
     [_leftView setImage:ima];
     [_leftView setFrame:CGRectMake(0, 0, 20, 20)];
-    CustomTextField *field = [[CustomTextField alloc] initWithOffsetX:8 textInset:40];
+    CustomTextField *field = [[CustomTextField alloc] init];
     field.placeholder = placeString;
     field.leftView = _leftView;
     field.leftViewMode = UITextFieldViewModeAlways;
     field.font = [UIFont systemFontOfSize:12.0];
     field.delegate = self;
-    [field setBackgroundColor:RGB(61, 49, 62)];
-    [field setValue:[[UIColor whiteColor] colorWithAlphaComponent:0.5] forKeyPath:@"_placeholderLabel.textColor"];
-    field.textColor = [UIColor whiteColor];
+    field.textColor = [UIColor grayColor];
     field.borderStyle = UITextBorderStyleNone;
-    field.layer.cornerRadius = 20;
+    [field setBackgroundColor:[UIColor whiteColor]];
     return field;
 }
 
-- (void)clickedRegister:(UIButton *)sender
-{
-    NSLog(@"注册");
-}
 
 - (void)clickedRightCodeTimeBtn:(UIButton *)timeBtn
 {
@@ -177,15 +213,12 @@
     dispatch_resume(_timer);
 }
 
-
 #pragma mark UITextFieldDelegate
 - (BOOL)textFieldShouldReturn:(UITextField *)textField
 {
     [textField resignFirstResponder];
     return YES;
 }
-
-
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

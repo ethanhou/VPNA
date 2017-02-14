@@ -8,7 +8,8 @@
 
 #import "LoginViewController.h"
 #import "RegisterViewController.h"
-
+#import "ResetPwdViewController.h"
+#import "HomeViewController.h"
 
 @interface LoginViewController ()
 
@@ -154,6 +155,8 @@
 - (void)clickedLogin:(UIButton *)sender
 {
     NSLog(@"登录");
+    HomeViewController *homeCtr = [[HomeViewController alloc] init];
+    [self.navigationController pushViewController:homeCtr animated:YES];
 }
 - (void)clickedRegister:(UIButton *)sender
 {
@@ -164,7 +167,8 @@
 - (void)clickedForget:(UIButton *)sender
 {
     NSLog(@"忘记密码");
-
+    ResetPwdViewController *resetPwdCtr = [[ResetPwdViewController alloc] init];
+    [self.navigationController pushViewController:resetPwdCtr animated:YES];
 }
 - (void)onBackButtonItemAction:(UIButton *)sender
 {

@@ -21,6 +21,8 @@
 		D0A71D321E518A0400817F34 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0A71D311E518A0400817F34 /* LoginViewController.m */; };
 		D0A71D351E518A1A00817F34 /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0A71D341E518A1A00817F34 /* RegisterViewController.m */; };
 		D0A71D381E518F9100817F34 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0A71D371E518F9100817F34 /* BaseViewController.m */; };
+		D0DD5BEF1E52F0B7006358C6 /* ResetPwdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0DD5BEE1E52F0B7006358C6 /* ResetPwdViewController.m */; };
+		D0DD5BF21E52F827006358C6 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0DD5BF11E52F827006358C6 /* HomeViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -53,6 +55,10 @@
 		D0A71D341E518A1A00817F34 /* RegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RegisterViewController.m; sourceTree = "<group>"; };
 		D0A71D361E518F9100817F34 /* BaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseViewController.h; sourceTree = "<group>"; };
 		D0A71D371E518F9100817F34 /* BaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseViewController.m; sourceTree = "<group>"; };
+		D0DD5BED1E52F0B7006358C6 /* ResetPwdViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResetPwdViewController.h; sourceTree = "<group>"; };
+		D0DD5BEE1E52F0B7006358C6 /* ResetPwdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResetPwdViewController.m; sourceTree = "<group>"; };
+		D0DD5BF01E52F827006358C6 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
+		D0DD5BF11E52F827006358C6 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,6 +159,10 @@
 				D0A71D311E518A0400817F34 /* LoginViewController.m */,
 				D0A71D331E518A1A00817F34 /* RegisterViewController.h */,
 				D0A71D341E518A1A00817F34 /* RegisterViewController.m */,
+				D0DD5BED1E52F0B7006358C6 /* ResetPwdViewController.h */,
+				D0DD5BEE1E52F0B7006358C6 /* ResetPwdViewController.m */,
+				D0DD5BF01E52F827006358C6 /* HomeViewController.h */,
+				D0DD5BF11E52F827006358C6 /* HomeViewController.m */,
 			);
 			name = Controllers;
 			path = OC/Main;
@@ -305,9 +315,11 @@
 				138FB9151E0F97E300D7A392 /* CommonlyConst.m in Sources */,
 				D0A71D351E518A1A00817F34 /* RegisterViewController.m in Sources */,
 				D0A71D321E518A0400817F34 /* LoginViewController.m in Sources */,
+				D0DD5BEF1E52F0B7006358C6 /* ResetPwdViewController.m in Sources */,
 				138FB90E1E0F97E300D7A392 /* main.m in Sources */,
 				138FB91B1E0F97E300D7A392 /* QWBaseViewController.m in Sources */,
 				138FB91E1E0F97E300D7A392 /* QWNavitionController.m in Sources */,
+				D0DD5BF21E52F827006358C6 /* HomeViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
