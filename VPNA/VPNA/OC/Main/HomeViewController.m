@@ -7,19 +7,77 @@
 //
 
 #import "HomeViewController.h"
+#import "FirstStepViewController.h"
+#import "PayViewController.h"
 
 @interface HomeViewController ()
+
+@property(nonatomic,strong)UIButton *freeBtn;
+@property(nonatomic,strong)UIButton *chargeBtn;
 
 @end
 
 @implementation HomeViewController
 
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    self.navigationController.navigationBarHidden = YES;
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.navigationController.navigationBarHidden = YES;
     self.logoView.hidden = YES;
+    
+    UIImage *image = [UIImage imageNamed:@"free_icon"];
+    
+    _freeBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    [_freeBtn setImage:image forState:UIControlStateNormal];
+    [_freeBtn setTitle:@"免费试用" forState:UIControlStateNormal];
+    [_freeBtn setImageEdgeInsets:UIEdgeInsetsMake(0, -10, 0, 10)];
+    [_freeBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    _freeBtn.contentHorizontalAlignment = UIControlContentHorizontalAlignmentCenter;
+    [_freeBtn addTarget:self action:@selector(clickedFreeBtn:) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:_freeBtn];
+    
+    image = [UIImage imageNamed:@"charge_icon"];
+    _chargeBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    [_chargeBtn setImage:image forState:UIControlStateNormal];
+    [_chargeBtn setTitle:@"正式使用" forState:UIControlStateNormal];
+    [_chargeBtn setImageEdgeInsets:UIEdgeInsetsMake(0, -10, 0, 10)];
+    [_chargeBtn setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
+    _chargeBtn.contentHorizontalAlignment = UIControlContentHorizontalAlignmentCenter;
+    [_chargeBtn addTarget:self action:@selector(clickedChargeBtn:) forControlEvents:UIControlEventTouchUpInside];
+    [self.view addSubview:_chargeBtn];
+    
+    [_freeBtn mas_makeConstraints:^(MASConstraintMaker *make){
+        
+        make.centerX.mas_offset(0);
+        make.centerY.mas_offset(-20);
+        make.height.mas_equalTo(30);
+        make.width.mas_equalTo(200);
+    }];
+    [_chargeBtn mas_makeConstraints:^(MASConstraintMaker *make){
+        
+        make.centerX.mas_offset(0);
+        make.top.equalTo(_freeBtn.mas_bottom).mas_offset(30);
+        make.height.equalTo(_freeBtn.mas_height);
+        make.width.equalTo(_freeBtn.mas_width);
+    }];
 }
 
+- (void)clickedFreeBtn:(UIButton *)sender
+{
+    NSLog(@"免费试用");
+    FirstStepViewController *firstCtr = [[FirstStepViewController alloc] init];
+    [self.navigationController pushViewController:firstCtr animated:YES];
+}
+
+- (void)clickedChargeBtn:(UIButton *)sender
+{
+    NSLog(@"正式使用");
+    PayViewController *payCtr = [[PayViewController alloc] init];
+    [self.navigationController pushViewController:payCtr animated:YES];
+}
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

@@ -18,6 +18,11 @@
 		138FB9281E0F97E300D7A392 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 138FB9271E0F97E300D7A392 /* Assets.xcassets */; };
 		138FB9351E0F9E5200D7A392 /* PackagesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 138FB9341E0F9E5200D7A392 /* PackagesViewController.m */; };
 		4B98C902D9E84DAD2AB5A856 /* libPods-VPNA.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 71D913A347324C870EFE15C6 /* libPods-VPNA.a */; };
+		D0670AC91E542DBC0049DC77 /* FirstStepViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0670AC81E542DBC0049DC77 /* FirstStepViewController.m */; };
+		D0670ACC1E5441680049DC77 /* UILabel+YBAttributeTextTapAction.m in Sources */ = {isa = PBXBuildFile; fileRef = D0670ACB1E5441680049DC77 /* UILabel+YBAttributeTextTapAction.m */; };
+		D0670ACF1E5443050049DC77 /* SecondStepViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0670ACE1E5443050049DC77 /* SecondStepViewController.m */; };
+		D0670AD21E5443120049DC77 /* ThirdStepViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0670AD11E5443120049DC77 /* ThirdStepViewController.m */; };
+		D0670AD51E5459060049DC77 /* PayViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0670AD41E5459060049DC77 /* PayViewController.m */; };
 		D0A71D321E518A0400817F34 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0A71D311E518A0400817F34 /* LoginViewController.m */; };
 		D0A71D351E518A1A00817F34 /* RegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0A71D341E518A1A00817F34 /* RegisterViewController.m */; };
 		D0A71D381E518F9100817F34 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0A71D371E518F9100817F34 /* BaseViewController.m */; };
@@ -49,6 +54,16 @@
 		1DCDE4AA257578A2D0192EAB /* Pods-VPNA.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VPNA.release.xcconfig"; path = "Pods/Target Support Files/Pods-VPNA/Pods-VPNA.release.xcconfig"; sourceTree = "<group>"; };
 		35CF9B9272EC61A652ACC269 /* Pods-VPNA.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VPNA.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VPNA/Pods-VPNA.debug.xcconfig"; sourceTree = "<group>"; };
 		71D913A347324C870EFE15C6 /* libPods-VPNA.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-VPNA.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D0670AC71E542DBC0049DC77 /* FirstStepViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FirstStepViewController.h; sourceTree = "<group>"; };
+		D0670AC81E542DBC0049DC77 /* FirstStepViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FirstStepViewController.m; sourceTree = "<group>"; };
+		D0670ACA1E5441680049DC77 /* UILabel+YBAttributeTextTapAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+YBAttributeTextTapAction.h"; sourceTree = "<group>"; };
+		D0670ACB1E5441680049DC77 /* UILabel+YBAttributeTextTapAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+YBAttributeTextTapAction.m"; sourceTree = "<group>"; };
+		D0670ACD1E5443050049DC77 /* SecondStepViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecondStepViewController.h; sourceTree = "<group>"; };
+		D0670ACE1E5443050049DC77 /* SecondStepViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecondStepViewController.m; sourceTree = "<group>"; };
+		D0670AD01E5443120049DC77 /* ThirdStepViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ThirdStepViewController.h; sourceTree = "<group>"; };
+		D0670AD11E5443120049DC77 /* ThirdStepViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ThirdStepViewController.m; sourceTree = "<group>"; };
+		D0670AD31E5459060049DC77 /* PayViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PayViewController.h; sourceTree = "<group>"; };
+		D0670AD41E5459060049DC77 /* PayViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PayViewController.m; sourceTree = "<group>"; };
 		D0A71D301E518A0400817F34 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		D0A71D311E518A0400817F34 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
 		D0A71D331E518A1A00817F34 /* RegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RegisterViewController.h; sourceTree = "<group>"; };
@@ -142,6 +157,8 @@
 		138FB9201E0F97E300D7A392 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				D0670ACA1E5441680049DC77 /* UILabel+YBAttributeTextTapAction.h */,
+				D0670ACB1E5441680049DC77 /* UILabel+YBAttributeTextTapAction.m */,
 				138FB9211E0F97E300D7A392 /* UIView+Extension.h */,
 				138FB9221E0F97E300D7A392 /* UIView+Extension.m */,
 			);
@@ -163,6 +180,14 @@
 				D0DD5BEE1E52F0B7006358C6 /* ResetPwdViewController.m */,
 				D0DD5BF01E52F827006358C6 /* HomeViewController.h */,
 				D0DD5BF11E52F827006358C6 /* HomeViewController.m */,
+				D0670AC71E542DBC0049DC77 /* FirstStepViewController.h */,
+				D0670AC81E542DBC0049DC77 /* FirstStepViewController.m */,
+				D0670ACD1E5443050049DC77 /* SecondStepViewController.h */,
+				D0670ACE1E5443050049DC77 /* SecondStepViewController.m */,
+				D0670AD01E5443120049DC77 /* ThirdStepViewController.h */,
+				D0670AD11E5443120049DC77 /* ThirdStepViewController.m */,
+				D0670AD31E5459060049DC77 /* PayViewController.h */,
+				D0670AD41E5459060049DC77 /* PayViewController.m */,
 			);
 			name = Controllers;
 			path = OC/Main;
@@ -308,7 +333,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				138FB9231E0F97E300D7A392 /* UIView+Extension.m in Sources */,
+				D0670AD51E5459060049DC77 /* PayViewController.m in Sources */,
+				D0670AC91E542DBC0049DC77 /* FirstStepViewController.m in Sources */,
 				138FB9351E0F9E5200D7A392 /* PackagesViewController.m in Sources */,
+				D0670AD21E5443120049DC77 /* ThirdStepViewController.m in Sources */,
+				D0670ACC1E5441680049DC77 /* UILabel+YBAttributeTextTapAction.m in Sources */,
 				D0A71D381E518F9100817F34 /* BaseViewController.m in Sources */,
 				138FB9251E0F97E300D7A392 /* QWTabBarController.m in Sources */,
 				138FB9111E0F97E300D7A392 /* AppDelegate.m in Sources */,
@@ -317,6 +346,7 @@
 				D0A71D321E518A0400817F34 /* LoginViewController.m in Sources */,
 				D0DD5BEF1E52F0B7006358C6 /* ResetPwdViewController.m in Sources */,
 				138FB90E1E0F97E300D7A392 /* main.m in Sources */,
+				D0670ACF1E5443050049DC77 /* SecondStepViewController.m in Sources */,
 				138FB91B1E0F97E300D7A392 /* QWBaseViewController.m in Sources */,
 				138FB91E1E0F97E300D7A392 /* QWNavitionController.m in Sources */,
 				D0DD5BF21E52F827006358C6 /* HomeViewController.m in Sources */,
