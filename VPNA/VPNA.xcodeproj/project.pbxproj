@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		136646371E5577090027BE76 /* HttpRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 136646361E5577090027BE76 /* HttpRequest.m */; };
 		138FB90E1E0F97E300D7A392 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 138FB90D1E0F97E300D7A392 /* main.m */; };
 		138FB9111E0F97E300D7A392 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 138FB9101E0F97E300D7A392 /* AppDelegate.m */; };
 		138FB9151E0F97E300D7A392 /* CommonlyConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 138FB9141E0F97E300D7A392 /* CommonlyConst.m */; };
@@ -29,6 +28,9 @@
 		D007D4511E55AA9E0061B72D /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D007D4501E55AA9E0061B72D /* Security.framework */; };
 		D007D4531E55AAA80061B72D /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = D007D4521E55AAA80061B72D /* libz.tbd */; };
 		D007D4551E55AAB00061B72D /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D007D4541E55AAB00061B72D /* CoreTelephony.framework */; };
+		D007D45A1E55ABAB0061B72D /* AFHTTPRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = D007D4571E55ABAB0061B72D /* AFHTTPRequestOperation.m */; };
+		D007D45B1E55ABAB0061B72D /* AFHTTPRequestOperationManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D007D4591E55ABAB0061B72D /* AFHTTPRequestOperationManager.m */; };
+		D007D45E1E55ABD90061B72D /* AFURLConnectionOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = D007D45D1E55ABD90061B72D /* AFURLConnectionOperation.m */; };
 		D0670AC91E542DBC0049DC77 /* FirstStepViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0670AC81E542DBC0049DC77 /* FirstStepViewController.m */; };
 		D0670ACC1E5441680049DC77 /* UILabel+YBAttributeTextTapAction.m in Sources */ = {isa = PBXBuildFile; fileRef = D0670ACB1E5441680049DC77 /* UILabel+YBAttributeTextTapAction.m */; };
 		D0670ACF1E5443050049DC77 /* SecondStepViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0670ACE1E5443050049DC77 /* SecondStepViewController.m */; };
@@ -42,8 +44,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		136646351E5577090027BE76 /* HttpRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HttpRequest.h; sourceTree = "<group>"; };
-		136646361E5577090027BE76 /* HttpRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HttpRequest.m; sourceTree = "<group>"; };
 		138FB9091E0F97E300D7A392 /* VPNA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VPNA.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		138FB90D1E0F97E300D7A392 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		138FB90F1E0F97E300D7A392 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -81,6 +81,12 @@
 		D007D4501E55AA9E0061B72D /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
 		D007D4521E55AAA80061B72D /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
 		D007D4541E55AAB00061B72D /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		D007D4561E55ABAB0061B72D /* AFHTTPRequestOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperation.h; sourceTree = "<group>"; };
+		D007D4571E55ABAB0061B72D /* AFHTTPRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPRequestOperation.m; sourceTree = "<group>"; };
+		D007D4581E55ABAB0061B72D /* AFHTTPRequestOperationManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFHTTPRequestOperationManager.h; sourceTree = "<group>"; };
+		D007D4591E55ABAB0061B72D /* AFHTTPRequestOperationManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFHTTPRequestOperationManager.m; sourceTree = "<group>"; };
+		D007D45C1E55ABD90061B72D /* AFURLConnectionOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFURLConnectionOperation.h; sourceTree = "<group>"; };
+		D007D45D1E55ABD90061B72D /* AFURLConnectionOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFURLConnectionOperation.m; sourceTree = "<group>"; };
 		D0670AC71E542DBC0049DC77 /* FirstStepViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FirstStepViewController.h; sourceTree = "<group>"; };
 		D0670AC81E542DBC0049DC77 /* FirstStepViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FirstStepViewController.m; sourceTree = "<group>"; };
 		D0670ACA1E5441680049DC77 /* UILabel+YBAttributeTextTapAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+YBAttributeTextTapAction.h"; sourceTree = "<group>"; };
@@ -121,16 +127,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		136646341E5576E80027BE76 /* HttpRequest */ = {
-			isa = PBXGroup;
-			children = (
-				136646351E5577090027BE76 /* HttpRequest.h */,
-				136646361E5577090027BE76 /* HttpRequest.m */,
-			);
-			name = HttpRequest;
-			path = OC/HttpRequest;
-			sourceTree = "<group>";
-		};
 		138FB9001E0F97E300D7A392 = {
 			isa = PBXGroup;
 			children = (
@@ -159,7 +155,6 @@
 				138FB9121E0F97E300D7A392 /* Other */,
 				138FB9181E0F97E300D7A392 /* Base */,
 				138FB9321E0F9DEF00D7A392 /* Controllers */,
-				136646341E5576E80027BE76 /* HttpRequest */,
 				138FB9201E0F97E300D7A392 /* Extension */,
 				138FB90C1E0F97E300D7A392 /* Supporting Files */,
 			);
@@ -264,6 +259,12 @@
 		D007D4201E55A84B0061B72D /* AFNManager */ = {
 			isa = PBXGroup;
 			children = (
+				D007D4561E55ABAB0061B72D /* AFHTTPRequestOperation.h */,
+				D007D4571E55ABAB0061B72D /* AFHTTPRequestOperation.m */,
+				D007D4581E55ABAB0061B72D /* AFHTTPRequestOperationManager.h */,
+				D007D4591E55ABAB0061B72D /* AFHTTPRequestOperationManager.m */,
+				D007D45C1E55ABD90061B72D /* AFURLConnectionOperation.h */,
+				D007D45D1E55ABD90061B72D /* AFURLConnectionOperation.m */,
 				D007D4211E55A8620061B72D /* YWAFHttpManager.h */,
 				D007D4221E55A8620061B72D /* YWAFHttpManager.m */,
 				D007D4231E55A8620061B72D /* YWAFHttpRequestCache.h */,
@@ -398,6 +399,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D007D45E1E55ABD90061B72D /* AFURLConnectionOperation.m in Sources */,
 				138FB9231E0F97E300D7A392 /* UIView+Extension.m in Sources */,
 				D007D4271E55A8620061B72D /* YWAFHttpManager.m in Sources */,
 				D007D42C1E55A8980061B72D /* YWObject+Utils.m in Sources */,
@@ -410,11 +412,12 @@
 				138FB9251E0F97E300D7A392 /* QWTabBarController.m in Sources */,
 				138FB9111E0F97E300D7A392 /* AppDelegate.m in Sources */,
 				138FB9151E0F97E300D7A392 /* CommonlyConst.m in Sources */,
+				D007D45B1E55ABAB0061B72D /* AFHTTPRequestOperationManager.m in Sources */,
+				D007D45A1E55ABAB0061B72D /* AFHTTPRequestOperation.m in Sources */,
 				D0A71D351E518A1A00817F34 /* RegisterViewController.m in Sources */,
 				D0A71D321E518A0400817F34 /* LoginViewController.m in Sources */,
 				D007D4281E55A8620061B72D /* YWAFHttpRequestCache.m in Sources */,
 				D0DD5BEF1E52F0B7006358C6 /* ResetPwdViewController.m in Sources */,
-				136646371E5577090027BE76 /* HttpRequest.m in Sources */,
 				138FB90E1E0F97E300D7A392 /* main.m in Sources */,
 				D0670ACF1E5443050049DC77 /* SecondStepViewController.m in Sources */,
 				D007D4291E55A8620061B72D /* YWAFHttpResponse.m in Sources */,
