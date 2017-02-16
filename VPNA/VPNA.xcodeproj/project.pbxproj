@@ -18,6 +18,16 @@
 		138FB9281E0F97E300D7A392 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 138FB9271E0F97E300D7A392 /* Assets.xcassets */; };
 		138FB9351E0F9E5200D7A392 /* PackagesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 138FB9341E0F9E5200D7A392 /* PackagesViewController.m */; };
 		4B98C902D9E84DAD2AB5A856 /* libPods-VPNA.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 71D913A347324C870EFE15C6 /* libPods-VPNA.a */; };
+		D007D4271E55A8620061B72D /* YWAFHttpManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D007D4221E55A8620061B72D /* YWAFHttpManager.m */; };
+		D007D4281E55A8620061B72D /* YWAFHttpRequestCache.m in Sources */ = {isa = PBXBuildFile; fileRef = D007D4241E55A8620061B72D /* YWAFHttpRequestCache.m */; };
+		D007D4291E55A8620061B72D /* YWAFHttpResponse.m in Sources */ = {isa = PBXBuildFile; fileRef = D007D4261E55A8620061B72D /* YWAFHttpResponse.m */; };
+		D007D42C1E55A8980061B72D /* YWObject+Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = D007D42B1E55A8980061B72D /* YWObject+Utils.m */; };
+		D007D44B1E55AA670061B72D /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D007D44A1E55AA670061B72D /* CoreFoundation.framework */; };
+		D007D44D1E55AA700061B72D /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D007D44C1E55AA700061B72D /* CFNetwork.framework */; };
+		D007D44F1E55AA7E0061B72D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D007D44E1E55AA7E0061B72D /* CoreGraphics.framework */; };
+		D007D4511E55AA9E0061B72D /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D007D4501E55AA9E0061B72D /* Security.framework */; };
+		D007D4531E55AAA80061B72D /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = D007D4521E55AAA80061B72D /* libz.tbd */; };
+		D007D4551E55AAB00061B72D /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D007D4541E55AAB00061B72D /* CoreTelephony.framework */; };
 		D0670AC91E542DBC0049DC77 /* FirstStepViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0670AC81E542DBC0049DC77 /* FirstStepViewController.m */; };
 		D0670ACC1E5441680049DC77 /* UILabel+YBAttributeTextTapAction.m in Sources */ = {isa = PBXBuildFile; fileRef = D0670ACB1E5441680049DC77 /* UILabel+YBAttributeTextTapAction.m */; };
 		D0670ACF1E5443050049DC77 /* SecondStepViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0670ACE1E5443050049DC77 /* SecondStepViewController.m */; };
@@ -54,6 +64,20 @@
 		1DCDE4AA257578A2D0192EAB /* Pods-VPNA.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VPNA.release.xcconfig"; path = "Pods/Target Support Files/Pods-VPNA/Pods-VPNA.release.xcconfig"; sourceTree = "<group>"; };
 		35CF9B9272EC61A652ACC269 /* Pods-VPNA.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-VPNA.debug.xcconfig"; path = "Pods/Target Support Files/Pods-VPNA/Pods-VPNA.debug.xcconfig"; sourceTree = "<group>"; };
 		71D913A347324C870EFE15C6 /* libPods-VPNA.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-VPNA.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D007D4211E55A8620061B72D /* YWAFHttpManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YWAFHttpManager.h; sourceTree = "<group>"; };
+		D007D4221E55A8620061B72D /* YWAFHttpManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YWAFHttpManager.m; sourceTree = "<group>"; };
+		D007D4231E55A8620061B72D /* YWAFHttpRequestCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YWAFHttpRequestCache.h; sourceTree = "<group>"; };
+		D007D4241E55A8620061B72D /* YWAFHttpRequestCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YWAFHttpRequestCache.m; sourceTree = "<group>"; };
+		D007D4251E55A8620061B72D /* YWAFHttpResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YWAFHttpResponse.h; sourceTree = "<group>"; };
+		D007D4261E55A8620061B72D /* YWAFHttpResponse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = YWAFHttpResponse.m; sourceTree = "<group>"; };
+		D007D42A1E55A8980061B72D /* YWObject+Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "YWObject+Utils.h"; sourceTree = "<group>"; };
+		D007D42B1E55A8980061B72D /* YWObject+Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "YWObject+Utils.m"; sourceTree = "<group>"; };
+		D007D44A1E55AA670061B72D /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
+		D007D44C1E55AA700061B72D /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		D007D44E1E55AA7E0061B72D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		D007D4501E55AA9E0061B72D /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		D007D4521E55AAA80061B72D /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		D007D4541E55AAB00061B72D /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
 		D0670AC71E542DBC0049DC77 /* FirstStepViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FirstStepViewController.h; sourceTree = "<group>"; };
 		D0670AC81E542DBC0049DC77 /* FirstStepViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FirstStepViewController.m; sourceTree = "<group>"; };
 		D0670ACA1E5441680049DC77 /* UILabel+YBAttributeTextTapAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+YBAttributeTextTapAction.h"; sourceTree = "<group>"; };
@@ -81,6 +105,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D007D4551E55AAB00061B72D /* CoreTelephony.framework in Frameworks */,
+				D007D4531E55AAA80061B72D /* libz.tbd in Frameworks */,
+				D007D4511E55AA9E0061B72D /* Security.framework in Frameworks */,
+				D007D44F1E55AA7E0061B72D /* CoreGraphics.framework in Frameworks */,
+				D007D44D1E55AA700061B72D /* CFNetwork.framework in Frameworks */,
+				D007D44B1E55AA670061B72D /* CoreFoundation.framework in Frameworks */,
 				4B98C902D9E84DAD2AB5A856 /* libPods-VPNA.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -144,6 +174,7 @@
 		138FB9181E0F97E300D7A392 /* Base */ = {
 			isa = PBXGroup;
 			children = (
+				D007D4201E55A84B0061B72D /* AFNManager */,
 				138FB9191E0F97E300D7A392 /* QWBaseViewController.h */,
 				138FB91A1E0F97E300D7A392 /* QWBaseViewController.m */,
 				138FB91C1E0F97E300D7A392 /* QWNavitionController.h */,
@@ -205,9 +236,30 @@
 		8F9A2E0B199409C7209F1958 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				D007D4541E55AAB00061B72D /* CoreTelephony.framework */,
+				D007D4521E55AAA80061B72D /* libz.tbd */,
+				D007D4501E55AA9E0061B72D /* Security.framework */,
+				D007D44E1E55AA7E0061B72D /* CoreGraphics.framework */,
+				D007D44C1E55AA700061B72D /* CFNetwork.framework */,
+				D007D44A1E55AA670061B72D /* CoreFoundation.framework */,
 				71D913A347324C870EFE15C6 /* libPods-VPNA.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		D007D4201E55A84B0061B72D /* AFNManager */ = {
+			isa = PBXGroup;
+			children = (
+				D007D4211E55A8620061B72D /* YWAFHttpManager.h */,
+				D007D4221E55A8620061B72D /* YWAFHttpManager.m */,
+				D007D4231E55A8620061B72D /* YWAFHttpRequestCache.h */,
+				D007D4241E55A8620061B72D /* YWAFHttpRequestCache.m */,
+				D007D4251E55A8620061B72D /* YWAFHttpResponse.h */,
+				D007D4261E55A8620061B72D /* YWAFHttpResponse.m */,
+				D007D42A1E55A8980061B72D /* YWObject+Utils.h */,
+				D007D42B1E55A8980061B72D /* YWObject+Utils.m */,
+			);
+			name = AFNManager;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -333,6 +385,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				138FB9231E0F97E300D7A392 /* UIView+Extension.m in Sources */,
+				D007D4271E55A8620061B72D /* YWAFHttpManager.m in Sources */,
+				D007D42C1E55A8980061B72D /* YWObject+Utils.m in Sources */,
 				D0670AD51E5459060049DC77 /* PayViewController.m in Sources */,
 				D0670AC91E542DBC0049DC77 /* FirstStepViewController.m in Sources */,
 				138FB9351E0F9E5200D7A392 /* PackagesViewController.m in Sources */,
@@ -344,9 +398,11 @@
 				138FB9151E0F97E300D7A392 /* CommonlyConst.m in Sources */,
 				D0A71D351E518A1A00817F34 /* RegisterViewController.m in Sources */,
 				D0A71D321E518A0400817F34 /* LoginViewController.m in Sources */,
+				D007D4281E55A8620061B72D /* YWAFHttpRequestCache.m in Sources */,
 				D0DD5BEF1E52F0B7006358C6 /* ResetPwdViewController.m in Sources */,
 				138FB90E1E0F97E300D7A392 /* main.m in Sources */,
 				D0670ACF1E5443050049DC77 /* SecondStepViewController.m in Sources */,
+				D007D4291E55A8620061B72D /* YWAFHttpResponse.m in Sources */,
 				138FB91B1E0F97E300D7A392 /* QWBaseViewController.m in Sources */,
 				138FB91E1E0F97E300D7A392 /* QWNavitionController.m in Sources */,
 				D0DD5BF21E52F827006358C6 /* HomeViewController.m in Sources */,
