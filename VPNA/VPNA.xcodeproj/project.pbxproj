@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		136646371E5577090027BE76 /* HttpRequest.m in Sources */ = {isa = PBXBuildFile; fileRef = 136646361E5577090027BE76 /* HttpRequest.m */; };
 		138FB90E1E0F97E300D7A392 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 138FB90D1E0F97E300D7A392 /* main.m */; };
 		138FB9111E0F97E300D7A392 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 138FB9101E0F97E300D7A392 /* AppDelegate.m */; };
 		138FB9151E0F97E300D7A392 /* CommonlyConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 138FB9141E0F97E300D7A392 /* CommonlyConst.m */; };
@@ -44,6 +45,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		136646351E5577090027BE76 /* HttpRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HttpRequest.h; sourceTree = "<group>"; };
+		136646361E5577090027BE76 /* HttpRequest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HttpRequest.m; sourceTree = "<group>"; };
 		138FB9091E0F97E300D7A392 /* VPNA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VPNA.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		138FB90D1E0F97E300D7A392 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		138FB90F1E0F97E300D7A392 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -127,6 +130,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		136646341E5576E80027BE76 /* HttpRequest */ = {
+			isa = PBXGroup;
+			children = (
+				136646351E5577090027BE76 /* HttpRequest.h */,
+				136646361E5577090027BE76 /* HttpRequest.m */,
+			);
+			name = HttpRequest;
+			path = OC/HttpRequest;
+			sourceTree = "<group>";
+		};
 		138FB9001E0F97E300D7A392 = {
 			isa = PBXGroup;
 			children = (
@@ -155,6 +168,7 @@
 				138FB9121E0F97E300D7A392 /* Other */,
 				138FB9181E0F97E300D7A392 /* Base */,
 				138FB9321E0F9DEF00D7A392 /* Controllers */,
+				136646341E5576E80027BE76 /* HttpRequest */,
 				138FB9201E0F97E300D7A392 /* Extension */,
 				138FB90C1E0F97E300D7A392 /* Supporting Files */,
 			);
@@ -418,6 +432,7 @@
 				D0A71D321E518A0400817F34 /* LoginViewController.m in Sources */,
 				D007D4281E55A8620061B72D /* YWAFHttpRequestCache.m in Sources */,
 				D0DD5BEF1E52F0B7006358C6 /* ResetPwdViewController.m in Sources */,
+				136646371E5577090027BE76 /* HttpRequest.m in Sources */,
 				138FB90E1E0F97E300D7A392 /* main.m in Sources */,
 				D0670ACF1E5443050049DC77 /* SecondStepViewController.m in Sources */,
 				D007D4291E55A8620061B72D /* YWAFHttpResponse.m in Sources */,
