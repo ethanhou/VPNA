@@ -9,6 +9,7 @@
 #import "HomeViewController.h"
 #import "FirstStepViewController.h"
 #import "PayViewController.h"
+#import "CountDownViewController.h"
 
 @interface HomeViewController ()
 
@@ -75,7 +76,7 @@
 - (void)clickedChargeBtn:(UIButton *)sender
 {
     NSLog(@"正式使用");
-    PayViewController *payCtr = [[PayViewController alloc] init];
+    CountDownViewController *payCtr = [[CountDownViewController alloc] init];
     [self.navigationController pushViewController:payCtr animated:YES];
 }
 - (void)didReceiveMemoryWarning {

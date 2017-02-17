@@ -7,6 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1323CF0B1E56DF160053CD16 /* CountDownViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1323CF0A1E56DF160053CD16 /* CountDownViewController.m */; };
+		1323CF261E56E2540053CD16 /* NSArray+Ext.m in Sources */ = {isa = PBXBuildFile; fileRef = 1323CF0F1E56E2540053CD16 /* NSArray+Ext.m */; };
+		1323CF271E56E2540053CD16 /* NSAttributedString+Ext.m in Sources */ = {isa = PBXBuildFile; fileRef = 1323CF111E56E2540053CD16 /* NSAttributedString+Ext.m */; };
+		1323CF291E56E2540053CD16 /* NSMutableArray+Ext.m in Sources */ = {isa = PBXBuildFile; fileRef = 1323CF151E56E2540053CD16 /* NSMutableArray+Ext.m */; };
+		1323CF2A1E56E2540053CD16 /* NSMutableAttributedString+Ext.m in Sources */ = {isa = PBXBuildFile; fileRef = 1323CF171E56E2540053CD16 /* NSMutableAttributedString+Ext.m */; };
+		1323CF2B1E56E2540053CD16 /* NSMutableDictionary+Ext.m in Sources */ = {isa = PBXBuildFile; fileRef = 1323CF191E56E2540053CD16 /* NSMutableDictionary+Ext.m */; };
+		1323CF2C1E56E2540053CD16 /* NSMutableString+Ext.m in Sources */ = {isa = PBXBuildFile; fileRef = 1323CF1B1E56E2540053CD16 /* NSMutableString+Ext.m */; };
+		1323CF2D1E56E2540053CD16 /* NSObject+Ext.m in Sources */ = {isa = PBXBuildFile; fileRef = 1323CF1D1E56E2540053CD16 /* NSObject+Ext.m */; };
+		1323CF2E1E56E2540053CD16 /* NSRegularExpression+Ext.m in Sources */ = {isa = PBXBuildFile; fileRef = 1323CF1F1E56E2540053CD16 /* NSRegularExpression+Ext.m */; };
+		1323CF301E56E2540053CD16 /* NSThread+Ext.m in Sources */ = {isa = PBXBuildFile; fileRef = 1323CF231E56E2540053CD16 /* NSThread+Ext.m */; };
 		138FB90E1E0F97E300D7A392 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 138FB90D1E0F97E300D7A392 /* main.m */; };
 		138FB9111E0F97E300D7A392 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 138FB9101E0F97E300D7A392 /* AppDelegate.m */; };
 		138FB9151E0F97E300D7A392 /* CommonlyConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 138FB9141E0F97E300D7A392 /* CommonlyConst.m */; };
@@ -44,6 +54,26 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1323CF091E56DF160053CD16 /* CountDownViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CountDownViewController.h; sourceTree = "<group>"; };
+		1323CF0A1E56DF160053CD16 /* CountDownViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CountDownViewController.m; sourceTree = "<group>"; };
+		1323CF0E1E56E2540053CD16 /* NSArray+Ext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+Ext.h"; sourceTree = "<group>"; };
+		1323CF0F1E56E2540053CD16 /* NSArray+Ext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Ext.m"; sourceTree = "<group>"; };
+		1323CF101E56E2540053CD16 /* NSAttributedString+Ext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSAttributedString+Ext.h"; sourceTree = "<group>"; };
+		1323CF111E56E2540053CD16 /* NSAttributedString+Ext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSAttributedString+Ext.m"; sourceTree = "<group>"; };
+		1323CF141E56E2540053CD16 /* NSMutableArray+Ext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableArray+Ext.h"; sourceTree = "<group>"; };
+		1323CF151E56E2540053CD16 /* NSMutableArray+Ext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableArray+Ext.m"; sourceTree = "<group>"; };
+		1323CF161E56E2540053CD16 /* NSMutableAttributedString+Ext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableAttributedString+Ext.h"; sourceTree = "<group>"; };
+		1323CF171E56E2540053CD16 /* NSMutableAttributedString+Ext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableAttributedString+Ext.m"; sourceTree = "<group>"; };
+		1323CF181E56E2540053CD16 /* NSMutableDictionary+Ext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableDictionary+Ext.h"; sourceTree = "<group>"; };
+		1323CF191E56E2540053CD16 /* NSMutableDictionary+Ext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableDictionary+Ext.m"; sourceTree = "<group>"; };
+		1323CF1A1E56E2540053CD16 /* NSMutableString+Ext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSMutableString+Ext.h"; sourceTree = "<group>"; };
+		1323CF1B1E56E2540053CD16 /* NSMutableString+Ext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSMutableString+Ext.m"; sourceTree = "<group>"; };
+		1323CF1C1E56E2540053CD16 /* NSObject+Ext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Ext.h"; sourceTree = "<group>"; };
+		1323CF1D1E56E2540053CD16 /* NSObject+Ext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Ext.m"; sourceTree = "<group>"; };
+		1323CF1E1E56E2540053CD16 /* NSRegularExpression+Ext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSRegularExpression+Ext.h"; sourceTree = "<group>"; };
+		1323CF1F1E56E2540053CD16 /* NSRegularExpression+Ext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSRegularExpression+Ext.m"; sourceTree = "<group>"; };
+		1323CF221E56E2540053CD16 /* NSThread+Ext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSThread+Ext.h"; sourceTree = "<group>"; };
+		1323CF231E56E2540053CD16 /* NSThread+Ext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSThread+Ext.m"; sourceTree = "<group>"; };
 		138FB9091E0F97E300D7A392 /* VPNA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VPNA.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		138FB90D1E0F97E300D7A392 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		138FB90F1E0F97E300D7A392 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -127,6 +157,39 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1323CF0C1E56E2540053CD16 /* extensions */ = {
+			isa = PBXGroup;
+			children = (
+				1323CF0D1E56E2540053CD16 /* foundation_extension */,
+			);
+			path = extensions;
+			sourceTree = "<group>";
+		};
+		1323CF0D1E56E2540053CD16 /* foundation_extension */ = {
+			isa = PBXGroup;
+			children = (
+				1323CF0E1E56E2540053CD16 /* NSArray+Ext.h */,
+				1323CF0F1E56E2540053CD16 /* NSArray+Ext.m */,
+				1323CF101E56E2540053CD16 /* NSAttributedString+Ext.h */,
+				1323CF111E56E2540053CD16 /* NSAttributedString+Ext.m */,
+				1323CF141E56E2540053CD16 /* NSMutableArray+Ext.h */,
+				1323CF151E56E2540053CD16 /* NSMutableArray+Ext.m */,
+				1323CF161E56E2540053CD16 /* NSMutableAttributedString+Ext.h */,
+				1323CF171E56E2540053CD16 /* NSMutableAttributedString+Ext.m */,
+				1323CF181E56E2540053CD16 /* NSMutableDictionary+Ext.h */,
+				1323CF191E56E2540053CD16 /* NSMutableDictionary+Ext.m */,
+				1323CF1A1E56E2540053CD16 /* NSMutableString+Ext.h */,
+				1323CF1B1E56E2540053CD16 /* NSMutableString+Ext.m */,
+				1323CF1C1E56E2540053CD16 /* NSObject+Ext.h */,
+				1323CF1D1E56E2540053CD16 /* NSObject+Ext.m */,
+				1323CF1E1E56E2540053CD16 /* NSRegularExpression+Ext.h */,
+				1323CF1F1E56E2540053CD16 /* NSRegularExpression+Ext.m */,
+				1323CF221E56E2540053CD16 /* NSThread+Ext.h */,
+				1323CF231E56E2540053CD16 /* NSThread+Ext.m */,
+			);
+			path = foundation_extension;
+			sourceTree = "<group>";
+		};
 		136646341E5576E80027BE76 /* HttpRequest */ = {
 			isa = PBXGroup;
 			children = (
@@ -160,6 +223,7 @@
 				138FB9101E0F97E300D7A392 /* AppDelegate.m */,
 				138FB9271E0F97E300D7A392 /* Assets.xcassets */,
 				138FB92C1E0F97E300D7A392 /* Info.plist */,
+				1323CF0C1E56E2540053CD16 /* extensions */,
 				138FB9121E0F97E300D7A392 /* Other */,
 				138FB9181E0F97E300D7A392 /* Base */,
 				138FB9321E0F9DEF00D7A392 /* Controllers */,
@@ -237,6 +301,8 @@
 				D0670AD11E5443120049DC77 /* ThirdStepViewController.m */,
 				D0670AD31E5459060049DC77 /* PayViewController.h */,
 				D0670AD41E5459060049DC77 /* PayViewController.m */,
+				1323CF091E56DF160053CD16 /* CountDownViewController.h */,
+				1323CF0A1E56DF160053CD16 /* CountDownViewController.m */,
 			);
 			name = Controllers;
 			path = OC/Main;
@@ -408,6 +474,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1323CF261E56E2540053CD16 /* NSArray+Ext.m in Sources */,
+				1323CF0B1E56DF160053CD16 /* CountDownViewController.m in Sources */,
 				D007D45E1E55ABD90061B72D /* AFURLConnectionOperation.m in Sources */,
 				138FB9231E0F97E300D7A392 /* UIView+Extension.m in Sources */,
 				D007D4271E55A8620061B72D /* YWAFHttpManager.m in Sources */,
@@ -418,19 +486,27 @@
 				D0670AD21E5443120049DC77 /* ThirdStepViewController.m in Sources */,
 				D0670ACC1E5441680049DC77 /* UILabel+YBAttributeTextTapAction.m in Sources */,
 				D0A71D381E518F9100817F34 /* BaseViewController.m in Sources */,
+				1323CF2C1E56E2540053CD16 /* NSMutableString+Ext.m in Sources */,
 				138FB9251E0F97E300D7A392 /* QWTabBarController.m in Sources */,
 				138FB9111E0F97E300D7A392 /* AppDelegate.m in Sources */,
+				1323CF301E56E2540053CD16 /* NSThread+Ext.m in Sources */,
 				138FB9151E0F97E300D7A392 /* CommonlyConst.m in Sources */,
+				1323CF271E56E2540053CD16 /* NSAttributedString+Ext.m in Sources */,
+				1323CF2D1E56E2540053CD16 /* NSObject+Ext.m in Sources */,
 				D007D45B1E55ABAB0061B72D /* AFHTTPRequestOperationManager.m in Sources */,
+				1323CF2B1E56E2540053CD16 /* NSMutableDictionary+Ext.m in Sources */,
 				D007D45A1E55ABAB0061B72D /* AFHTTPRequestOperation.m in Sources */,
 				D0A71D351E518A1A00817F34 /* RegisterViewController.m in Sources */,
 				D0A71D321E518A0400817F34 /* LoginViewController.m in Sources */,
+				1323CF2A1E56E2540053CD16 /* NSMutableAttributedString+Ext.m in Sources */,
 				D007D4281E55A8620061B72D /* YWAFHttpRequestCache.m in Sources */,
+				1323CF2E1E56E2540053CD16 /* NSRegularExpression+Ext.m in Sources */,
 				D0DD5BEF1E52F0B7006358C6 /* ResetPwdViewController.m in Sources */,
 				138FB90E1E0F97E300D7A392 /* main.m in Sources */,
 				D0670ACF1E5443050049DC77 /* SecondStepViewController.m in Sources */,
 				D007D4291E55A8620061B72D /* YWAFHttpResponse.m in Sources */,
 				138FB91B1E0F97E300D7A392 /* QWBaseViewController.m in Sources */,
+				1323CF291E56E2540053CD16 /* NSMutableArray+Ext.m in Sources */,
 				138FB91E1E0F97E300D7A392 /* QWNavitionController.m in Sources */,
 				D0DD5BF21E52F827006358C6 /* HomeViewController.m in Sources */,
 			);
