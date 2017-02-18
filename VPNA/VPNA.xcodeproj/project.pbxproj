@@ -17,6 +17,9 @@
 		1323CF2D1E56E2540053CD16 /* NSObject+Ext.m in Sources */ = {isa = PBXBuildFile; fileRef = 1323CF1D1E56E2540053CD16 /* NSObject+Ext.m */; };
 		1323CF2E1E56E2540053CD16 /* NSRegularExpression+Ext.m in Sources */ = {isa = PBXBuildFile; fileRef = 1323CF1F1E56E2540053CD16 /* NSRegularExpression+Ext.m */; };
 		1323CF301E56E2540053CD16 /* NSThread+Ext.m in Sources */ = {isa = PBXBuildFile; fileRef = 1323CF231E56E2540053CD16 /* NSThread+Ext.m */; };
+		1323CF351E56ED9F0053CD16 /* PaymentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1323CF341E56ED9F0053CD16 /* PaymentCell.m */; };
+		133562681E58594D00E4F133 /* CustomPaymentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 133562671E58594D00E4F133 /* CustomPaymentCell.m */; };
+		1335626B1E585A9F00E4F133 /* BaseTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1335626A1E585A9F00E4F133 /* BaseTableViewCell.m */; };
 		138FB90E1E0F97E300D7A392 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 138FB90D1E0F97E300D7A392 /* main.m */; };
 		138FB9111E0F97E300D7A392 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 138FB9101E0F97E300D7A392 /* AppDelegate.m */; };
 		138FB9151E0F97E300D7A392 /* CommonlyConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 138FB9141E0F97E300D7A392 /* CommonlyConst.m */; };
@@ -74,6 +77,12 @@
 		1323CF1F1E56E2540053CD16 /* NSRegularExpression+Ext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSRegularExpression+Ext.m"; sourceTree = "<group>"; };
 		1323CF221E56E2540053CD16 /* NSThread+Ext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSThread+Ext.h"; sourceTree = "<group>"; };
 		1323CF231E56E2540053CD16 /* NSThread+Ext.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSThread+Ext.m"; sourceTree = "<group>"; };
+		1323CF331E56ED9F0053CD16 /* PaymentCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PaymentCell.h; sourceTree = "<group>"; };
+		1323CF341E56ED9F0053CD16 /* PaymentCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PaymentCell.m; sourceTree = "<group>"; };
+		133562661E58594D00E4F133 /* CustomPaymentCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomPaymentCell.h; sourceTree = "<group>"; };
+		133562671E58594D00E4F133 /* CustomPaymentCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomPaymentCell.m; sourceTree = "<group>"; };
+		133562691E585A9F00E4F133 /* BaseTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseTableViewCell.h; sourceTree = "<group>"; };
+		1335626A1E585A9F00E4F133 /* BaseTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseTableViewCell.m; sourceTree = "<group>"; };
 		138FB9091E0F97E300D7A392 /* VPNA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VPNA.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		138FB90D1E0F97E300D7A392 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		138FB90F1E0F97E300D7A392 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -190,6 +199,20 @@
 			path = foundation_extension;
 			sourceTree = "<group>";
 		};
+		1323CF321E56ED660053CD16 /* cells */ = {
+			isa = PBXGroup;
+			children = (
+				1323CF331E56ED9F0053CD16 /* PaymentCell.h */,
+				1323CF341E56ED9F0053CD16 /* PaymentCell.m */,
+				133562661E58594D00E4F133 /* CustomPaymentCell.h */,
+				133562671E58594D00E4F133 /* CustomPaymentCell.m */,
+				133562691E585A9F00E4F133 /* BaseTableViewCell.h */,
+				1335626A1E585A9F00E4F133 /* BaseTableViewCell.m */,
+			);
+			name = cells;
+			path = OC/cells;
+			sourceTree = "<group>";
+		};
 		136646341E5576E80027BE76 /* HttpRequest */ = {
 			isa = PBXGroup;
 			children = (
@@ -223,6 +246,7 @@
 				138FB9101E0F97E300D7A392 /* AppDelegate.m */,
 				138FB9271E0F97E300D7A392 /* Assets.xcassets */,
 				138FB92C1E0F97E300D7A392 /* Info.plist */,
+				1323CF321E56ED660053CD16 /* cells */,
 				1323CF0C1E56E2540053CD16 /* extensions */,
 				138FB9121E0F97E300D7A392 /* Other */,
 				138FB9181E0F97E300D7A392 /* Base */,
@@ -481,11 +505,14 @@
 				D007D4271E55A8620061B72D /* YWAFHttpManager.m in Sources */,
 				D007D42C1E55A8980061B72D /* YWObject+Utils.m in Sources */,
 				D0670AD51E5459060049DC77 /* PayViewController.m in Sources */,
+				133562681E58594D00E4F133 /* CustomPaymentCell.m in Sources */,
 				D0670AC91E542DBC0049DC77 /* FirstStepViewController.m in Sources */,
 				138FB9351E0F9E5200D7A392 /* PackagesViewController.m in Sources */,
 				D0670AD21E5443120049DC77 /* ThirdStepViewController.m in Sources */,
+				1323CF351E56ED9F0053CD16 /* PaymentCell.m in Sources */,
 				D0670ACC1E5441680049DC77 /* UILabel+YBAttributeTextTapAction.m in Sources */,
 				D0A71D381E518F9100817F34 /* BaseViewController.m in Sources */,
+				1335626B1E585A9F00E4F133 /* BaseTableViewCell.m in Sources */,
 				1323CF2C1E56E2540053CD16 /* NSMutableString+Ext.m in Sources */,
 				138FB9251E0F97E300D7A392 /* QWTabBarController.m in Sources */,
 				138FB9111E0F97E300D7A392 /* AppDelegate.m in Sources */,

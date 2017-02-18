@@ -7,19 +7,32 @@
 //
 
 #import "PayViewController.h"
-
+#import "PaymentCell.h"
+#import "CustomPaymentCell.h"
 @interface PayViewController ()<UITableViewDelegate,UITableViewDataSource>
 {
     NSMutableArray *_dataArray;
 }
 @property(nonatomic,strong)UITableView *tableView;
+@property (nonatomic, strong) UIButton *nextBtn;
+@property (nonatomic, strong) CustomPaymentCell *customPaymentCell;
+
 @end
 
 @implementation PayViewController
 
+- (void)initCustomPaymentCell {
+    self.customPaymentCell = [[CustomPaymentCell alloc] initWithStyle:UITableViewCellStyleValue1
+                                                      reuseIdentifier:nil];
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    [self initCustomPaymentCell];
 
+    UIView *header = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 100, 30)];
+    
     _dataArray = [NSMutableArray arrayWithObjects:@{@"month":@(1),@"price":@(29)},
                   @{@"month":@(1),@"price":@(29)},
                   @{@"month":@(1),@"price":@(29)},
@@ -31,6 +44,7 @@
     _tableView.tableFooterView = [UIView new];
     [_tableView setBackgroundColor:RGBA(50, 47, 76,0.5)];
     _tableView.separatorStyle = UITableViewCellSelectionStyleNone;
+    _tableView.tableHeaderView = header;
     [self.view addSubview:_tableView];
     [_tableView mas_makeConstraints:^(MASConstraintMaker *make){
         
@@ -46,7 +60,7 @@
 #pragma mark UITableViewDelegate & UITableViewDataSource
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return 60;
+    return 44;
 }
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
@@ -54,14 +68,27 @@
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *identi = @"Cell";
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:identi];
-    if (!cell) {
-        
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:identi];
+    UITableViewCell *cell = nil;
+    if (indexPath.row == _dataArray.count) {
+        self.customPaymentCell.index = indexPath.row;
+        cell = self.customPaymentCell;
+    } else {
+        static NSString *identi = @"Cell";
+        cell = [tableView dequeueReusableCellWithIdentifier:identi];
+        if (!cell) {
+            
+            cell = [[PaymentCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:identi];
+        }
+        PaymentCell *payCell = (PaymentCell *)cell;
+        payCell.index = indexPath.row;
+        payCell.didClickBlock = ^(NSInteger index) {
+            
+        };
+
     }
     [cell setBackgroundColor:[UIColor clearColor]];
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
+
     return cell;
 }
 - (void)didReceiveMemoryWarning {

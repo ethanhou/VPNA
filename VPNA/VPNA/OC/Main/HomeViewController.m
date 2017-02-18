@@ -23,8 +23,9 @@
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    self.navigationController.navigationBarHidden = YES;
+//    self.navigationController.navigationBarHidden = YES;
 }
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.logoView.hidden = YES;
@@ -76,7 +77,7 @@
 - (void)clickedChargeBtn:(UIButton *)sender
 {
     NSLog(@"正式使用");
-    CountDownViewController *payCtr = [[CountDownViewController alloc] init];
+    PayViewController *payCtr = [[PayViewController alloc] init];
     [self.navigationController pushViewController:payCtr animated:YES];
 }
 - (void)didReceiveMemoryWarning {
