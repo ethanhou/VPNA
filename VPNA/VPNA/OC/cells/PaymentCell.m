@@ -42,7 +42,6 @@
         make.height.mas_equalTo(40.f);
         make.width.mas_equalTo(45);
     }];
-
 }
 
 - (void)payBtnClicked:(UIButton *)payBtn {

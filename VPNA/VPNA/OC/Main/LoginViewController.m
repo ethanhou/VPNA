@@ -46,6 +46,7 @@
     _phoneField = [self createTextField:@"请输入手机号"
                       withLeftImageName:@"phone_icon-1"];
     [_alphView addSubview:_phoneField];
+    _phoneField.text = @"17612126606";
     
     UIView *lineView = [[UIView alloc] init];
     [lineView setBackgroundColor:RGB(235, 236, 238)];
@@ -54,6 +55,8 @@
     _passwordField = [self createTextField:@"请输入密码"
                          withLeftImageName:@"password_icon-1"];
     [_alphView addSubview:_passwordField];
+    _passwordField.text = @"111111";
+
     
     _loginBtn = [UIButton buttonWithType:UIButtonTypeCustom];
     [_loginBtn setBackgroundColor:RGBA(91, 91, 112,0.6)];
@@ -155,8 +158,17 @@
 - (void)clickedLogin:(UIButton *)sender
 {
     NSLog(@"登录");
-    HomeViewController *homeCtr = [[HomeViewController alloc] init];
-    [self.navigationController pushViewController:homeCtr animated:YES];
+    [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+
+    [[YWAFHttpManager shareHttpManager] requestPostURL:@"http://112.74.48.30:8080/user/login"
+                                        withParameters:@{@"mobile" : self.phoneField.text, @"password":self.passwordField.text}
+                                          withUserInfo:nil
+                                      withReqOverBlock:^(YWAFHttpResponse *response) {
+                                          [MBProgressHUD hideHUDForView:self.view animated:YES];
+                                          HomeViewController *homeCtr = [[HomeViewController alloc] init];
+                                          [self.navigationController pushViewController:homeCtr animated:YES];
+                                          NSLog(@"成功");
+                                      }];
 }
 - (void)clickedRegister:(UIButton *)sender
 {

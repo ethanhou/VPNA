@@ -7,7 +7,8 @@
 //
 
 #import "RegisterViewController.h"
-
+#import <SMS_SDK/SMSSDK.h>
+#import "HomeViewController.h"
 @interface RegisterViewController ()
 
 @property(nonatomic,strong)UIView *alphView;
@@ -22,6 +23,86 @@
 
 @implementation RegisterViewController
 
+#pragma mark - private method
+- (void) _getVertifySuccess {
+    self.resetCodeTime = NO;
+    __block int timeout=60; //倒计时时间
+    dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
+    dispatch_source_t _timer = dispatch_source_create(DISPATCH_SOURCE_TYPE_TIMER, 0, 0,queue);
+    dispatch_source_set_timer(_timer,dispatch_walltime(NULL, 0),1.0*NSEC_PER_SEC, 0); //每秒执行
+    dispatch_source_set_event_handler(_timer, ^{
+        if(timeout<=0)
+        {
+            dispatch_source_cancel(_timer);
+            dispatch_async(dispatch_get_main_queue(), ^{
+                
+                [self.codeTimeBtn setTitle:@"获取验证码" forState:UIControlStateNormal];
+                self.codeTimeBtn.userInteractionEnabled = YES;
+                self.codeTimeBtn.selected = NO;
+                
+            });
+        }else{
+            int seconds = timeout % 61;
+            NSString *strTime = [NSString stringWithFormat:@"%.1d", seconds];
+            dispatch_async(dispatch_get_main_queue(), ^{
+                
+                if (self.resetCodeTime)
+                {
+                    dispatch_source_cancel(_timer);
+                    [self.codeTimeBtn setTitle:@"获取验证码" forState:UIControlStateNormal];
+                    self.codeTimeBtn.userInteractionEnabled = YES;
+                    self.codeTimeBtn.selected = NO;
+                }
+                else
+                {
+                    self.codeTimeBtn.selected = YES;
+                    [self.codeTimeBtn setTitle:[NSString stringWithFormat:@"%@s重新获取",strTime] forState:UIControlStateSelected];
+                    [self.codeTimeBtn setTitleColor:RGB(209, 209, 209) forState:UIControlStateSelected];
+                    self.codeTimeBtn.userInteractionEnabled = NO;
+                    
+                }
+                
+                
+            });
+            timeout--;
+            
+        }
+    });
+    dispatch_resume(_timer);
+}
+
+- (void) _getVertifyCode {
+    [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+    [SMSSDK getVerificationCodeByMethod:SMSGetCodeMethodSMS phoneNumber:@"17612126606"
+                                   zone:@"86"
+                       customIdentifier:nil
+                                 result:^(NSError *error){
+                                     [MBProgressHUD hideHUDForView:self.view animated:YES];
+                                     if (!error) {
+                                         NSLog(@"获取验证码成功");
+                                         [self _getVertifySuccess];
+
+
+                                     } else {
+                                         NSLog(@"错误信息：%@",error);
+                                     }}];
+}
+
+//http://localhost:8080/user/regist?mobile=15618823540&password=900512&deviceId=111111111111111111111&terminal=20
+- (void)_triggerRegister {
+    [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+
+    [[YWAFHttpManager shareHttpManager] requestPostURL:@"http://112.74.48.30:8080/user/regist"
+                                        withParameters:@{@"mobile" : self.phoneField.text, @"password":self.passwordField.text, @"deviceId":@"111111111", @"terminal": @(20)}
+                                          withUserInfo:nil
+                                      withReqOverBlock:^(YWAFHttpResponse *response) {
+                                          [MBProgressHUD hideHUDForView:self.view animated:YES];
+                                          HomeViewController *homeCtr = [[HomeViewController alloc] init];
+                                          [self.navigationController pushViewController:homeCtr animated:YES];
+                                      }];
+}
+
+#pragma mark -
 - (void)viewDidLoad {
     [super viewDidLoad];
     _alphView = [[UIView alloc] init];
@@ -41,10 +122,12 @@
     _phoneField = [self createTextField:@"请输入手机号"
                       withLeftImageName:@"phone_icon-2"];
     [_alphView addSubview:_phoneField];
+    _phoneField.text = @"17612126606";
     
     _passwordField = [self createTextField:@"请输入密码"
                          withLeftImageName:@"password_icon-2"];
     [_alphView addSubview:_passwordField];
+    _passwordField.text = @"111111";
     
     _authCodeField = [self createTextField:@"请输入验证码"
                          withLeftImageName:@"authcode_icon-2"];
@@ -126,55 +209,33 @@
 
 - (void)clickedRegister:(UIButton *)sender
 {
+    [self _triggerRegister];
+
+//
+//    [SMSSDK commitVerificationCode:self.authCodeField.text phoneNumber:self.phoneField.text zone:@"86" result:^(SMSSDKUserInfo *userInfo, NSError *error) {
+//        
+//        {
+//            if (!error)
+//            {
+//                [self _triggerRegister];
+//                NSLog(@"验证成功");
+//            }
+//            else
+//            {
+//                NSLog(@"错误信息:%@",error);
+//            }
+//        }
+//    }];
+    
     NSLog(@"注册");
+
 }
+
+
 
 - (void)clickedRightCodeTimeBtn:(UIButton *)timeBtn
 {
-    self.resetCodeTime = NO;
-    __block int timeout=60; //倒计时时间
-    dispatch_queue_t queue = dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0);
-    dispatch_source_t _timer = dispatch_source_create(DISPATCH_SOURCE_TYPE_TIMER, 0, 0,queue);
-    dispatch_source_set_timer(_timer,dispatch_walltime(NULL, 0),1.0*NSEC_PER_SEC, 0); //每秒执行
-    dispatch_source_set_event_handler(_timer, ^{
-        if(timeout<=0)
-        {
-            dispatch_source_cancel(_timer);
-            dispatch_async(dispatch_get_main_queue(), ^{
-                
-                [timeBtn setTitle:@"获取验证码" forState:UIControlStateNormal];
-                timeBtn.userInteractionEnabled = YES;
-                timeBtn.selected = NO;
-                
-            });
-        }else{
-            int seconds = timeout % 61;
-            NSString *strTime = [NSString stringWithFormat:@"%.1d", seconds];
-            dispatch_async(dispatch_get_main_queue(), ^{
-                
-                if (self.resetCodeTime)
-                {
-                    dispatch_source_cancel(_timer);
-                    [timeBtn setTitle:@"获取验证码" forState:UIControlStateNormal];
-                    timeBtn.userInteractionEnabled = YES;
-                    timeBtn.selected = NO;
-                }
-                else
-                {
-                    timeBtn.selected = YES;
-                    [timeBtn setTitle:[NSString stringWithFormat:@"%@s重新获取",strTime] forState:UIControlStateSelected];
-                    [timeBtn setTitleColor:RGB(209, 209, 209) forState:UIControlStateSelected];
-                    timeBtn.userInteractionEnabled = NO;
-                    
-                }
-                
-                
-            });
-            timeout--;
-            
-        }
-    });
-    dispatch_resume(_timer);
+    [self _getVertifyCode];
 }
 
 

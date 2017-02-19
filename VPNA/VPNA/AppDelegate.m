@@ -10,6 +10,9 @@
 #import "QWTabBarController.h"
 #import "AFNetworking.h"
 #import "LoginViewController.h"
+#import "YWAFHttpManager.h"
+#import <SMS_SDK/SMSSDK.h>
+
 
 @interface AppDelegate ()
 
@@ -19,6 +22,17 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    //初始化应用，appKey和appSecret从后台申请得
+    [SMSSDK registerApp:@"1b19b4f96c500"
+             withSecret:@"7f6a684e2d18e0cf4e9022372f40e1fb"];
+    
+    [[YWAFHttpManager shareHttpManager] requestPostURL:@"http://112.74.48.30:8080/app/init"
+                                        withParameters:@{@"type" : @(10)}
+                                          withUserInfo:nil
+                                      withReqOverBlock:^(YWAFHttpResponse *response) {
+                                          NSLog(@"成功");
+                                      }];
+    
      self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     
     LoginViewController *loginCtr = [[LoginViewController alloc] init];

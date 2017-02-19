@@ -20,6 +20,14 @@
 		1323CF351E56ED9F0053CD16 /* PaymentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1323CF341E56ED9F0053CD16 /* PaymentCell.m */; };
 		133562681E58594D00E4F133 /* CustomPaymentCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 133562671E58594D00E4F133 /* CustomPaymentCell.m */; };
 		1335626B1E585A9F00E4F133 /* BaseTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1335626A1E585A9F00E4F133 /* BaseTableViewCell.m */; };
+		1335626F1E5944C000E4F133 /* DataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1335626E1E5944C000E4F133 /* DataManager.m */; };
+		133562751E5946F500E4F133 /* MOBFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 133562721E5946F500E4F133 /* MOBFoundation.framework */; };
+		133562761E5946F500E4F133 /* MOBFoundationEx.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 133562731E5946F500E4F133 /* MOBFoundationEx.framework */; };
+		133562771E5946F500E4F133 /* SMS_SDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 133562741E5946F500E4F133 /* SMS_SDK.framework */; };
+		133562791E5947A000E4F133 /* libicucore.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 133562781E5947A000E4F133 /* libicucore.tbd */; };
+		1335627B1E5947AB00E4F133 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1335627A1E5947AB00E4F133 /* MessageUI.framework */; };
+		1335627D1E5947B500E4F133 /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1335627C1E5947B500E4F133 /* JavaScriptCore.framework */; };
+		1335627F1E5947C700E4F133 /* libstdc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 1335627E1E5947C700E4F133 /* libstdc++.tbd */; };
 		138FB90E1E0F97E300D7A392 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 138FB90D1E0F97E300D7A392 /* main.m */; };
 		138FB9111E0F97E300D7A392 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 138FB9101E0F97E300D7A392 /* AppDelegate.m */; };
 		138FB9151E0F97E300D7A392 /* CommonlyConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 138FB9141E0F97E300D7A392 /* CommonlyConst.m */; };
@@ -83,6 +91,15 @@
 		133562671E58594D00E4F133 /* CustomPaymentCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomPaymentCell.m; sourceTree = "<group>"; };
 		133562691E585A9F00E4F133 /* BaseTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BaseTableViewCell.h; sourceTree = "<group>"; };
 		1335626A1E585A9F00E4F133 /* BaseTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BaseTableViewCell.m; sourceTree = "<group>"; };
+		1335626D1E5944C000E4F133 /* DataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataManager.h; sourceTree = "<group>"; };
+		1335626E1E5944C000E4F133 /* DataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataManager.m; sourceTree = "<group>"; };
+		133562721E5946F500E4F133 /* MOBFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MOBFoundation.framework; sourceTree = "<group>"; };
+		133562731E5946F500E4F133 /* MOBFoundationEx.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = MOBFoundationEx.framework; sourceTree = "<group>"; };
+		133562741E5946F500E4F133 /* SMS_SDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SMS_SDK.framework; sourceTree = "<group>"; };
+		133562781E5947A000E4F133 /* libicucore.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libicucore.tbd; path = usr/lib/libicucore.tbd; sourceTree = SDKROOT; };
+		1335627A1E5947AB00E4F133 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		1335627C1E5947B500E4F133 /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
+		1335627E1E5947C700E4F133 /* libstdc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.tbd"; path = "usr/lib/libstdc++.tbd"; sourceTree = SDKROOT; };
 		138FB9091E0F97E300D7A392 /* VPNA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VPNA.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		138FB90D1E0F97E300D7A392 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		138FB90F1E0F97E300D7A392 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -153,13 +170,20 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1335627F1E5947C700E4F133 /* libstdc++.tbd in Frameworks */,
+				1335627D1E5947B500E4F133 /* JavaScriptCore.framework in Frameworks */,
+				1335627B1E5947AB00E4F133 /* MessageUI.framework in Frameworks */,
+				133562791E5947A000E4F133 /* libicucore.tbd in Frameworks */,
+				133562751E5946F500E4F133 /* MOBFoundation.framework in Frameworks */,
 				D007D4551E55AAB00061B72D /* CoreTelephony.framework in Frameworks */,
 				D007D4531E55AAA80061B72D /* libz.tbd in Frameworks */,
 				D007D4511E55AA9E0061B72D /* Security.framework in Frameworks */,
 				D007D44F1E55AA7E0061B72D /* CoreGraphics.framework in Frameworks */,
 				D007D44D1E55AA700061B72D /* CFNetwork.framework in Frameworks */,
 				D007D44B1E55AA670061B72D /* CoreFoundation.framework in Frameworks */,
+				133562771E5946F500E4F133 /* SMS_SDK.framework in Frameworks */,
 				4B98C902D9E84DAD2AB5A856 /* libPods-VPNA.a in Frameworks */,
+				133562761E5946F500E4F133 /* MOBFoundationEx.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -213,6 +237,34 @@
 			path = OC/cells;
 			sourceTree = "<group>";
 		};
+		1335626C1E59448000E4F133 /* models */ = {
+			isa = PBXGroup;
+			children = (
+				1335626D1E5944C000E4F133 /* DataManager.h */,
+				1335626E1E5944C000E4F133 /* DataManager.m */,
+			);
+			name = models;
+			path = OC/models;
+			sourceTree = "<group>";
+		};
+		133562701E5946E400E4F133 /* libs */ = {
+			isa = PBXGroup;
+			children = (
+				133562711E5946F500E4F133 /* SMS_SDK */,
+			);
+			path = libs;
+			sourceTree = "<group>";
+		};
+		133562711E5946F500E4F133 /* SMS_SDK */ = {
+			isa = PBXGroup;
+			children = (
+				133562721E5946F500E4F133 /* MOBFoundation.framework */,
+				133562731E5946F500E4F133 /* MOBFoundationEx.framework */,
+				133562741E5946F500E4F133 /* SMS_SDK.framework */,
+			);
+			path = SMS_SDK;
+			sourceTree = "<group>";
+		};
 		136646341E5576E80027BE76 /* HttpRequest */ = {
 			isa = PBXGroup;
 			children = (
@@ -246,6 +298,7 @@
 				138FB9101E0F97E300D7A392 /* AppDelegate.m */,
 				138FB9271E0F97E300D7A392 /* Assets.xcassets */,
 				138FB92C1E0F97E300D7A392 /* Info.plist */,
+				1335626C1E59448000E4F133 /* models */,
 				1323CF321E56ED660053CD16 /* cells */,
 				1323CF0C1E56E2540053CD16 /* extensions */,
 				138FB9121E0F97E300D7A392 /* Other */,
@@ -253,6 +306,7 @@
 				138FB9321E0F9DEF00D7A392 /* Controllers */,
 				136646341E5576E80027BE76 /* HttpRequest */,
 				138FB9201E0F97E300D7A392 /* Extension */,
+				133562701E5946E400E4F133 /* libs */,
 				138FB90C1E0F97E300D7A392 /* Supporting Files */,
 			);
 			path = VPNA;
@@ -344,6 +398,10 @@
 		8F9A2E0B199409C7209F1958 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				1335627E1E5947C700E4F133 /* libstdc++.tbd */,
+				1335627C1E5947B500E4F133 /* JavaScriptCore.framework */,
+				1335627A1E5947AB00E4F133 /* MessageUI.framework */,
+				133562781E5947A000E4F133 /* libicucore.tbd */,
 				D007D4541E55AAB00061B72D /* CoreTelephony.framework */,
 				D007D4521E55AAA80061B72D /* libz.tbd */,
 				D007D4501E55AA9E0061B72D /* Security.framework */,
@@ -517,6 +575,7 @@
 				138FB9251E0F97E300D7A392 /* QWTabBarController.m in Sources */,
 				138FB9111E0F97E300D7A392 /* AppDelegate.m in Sources */,
 				1323CF301E56E2540053CD16 /* NSThread+Ext.m in Sources */,
+				1335626F1E5944C000E4F133 /* DataManager.m in Sources */,
 				138FB9151E0F97E300D7A392 /* CommonlyConst.m in Sources */,
 				1323CF271E56E2540053CD16 /* NSAttributedString+Ext.m in Sources */,
 				1323CF2D1E56E2540053CD16 /* NSObject+Ext.m in Sources */,
@@ -638,6 +697,10 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = U6X32JP949;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/VPNA/libs/SMS_SDK",
+				);
 				GCC_PREFIX_HEADER = VPNA/OC/Other/VPNAPrefixHeader.pch;
 				INFOPLIST_FILE = VPNA/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -655,6 +718,10 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = U6X32JP949;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/VPNA/libs/SMS_SDK",
+				);
 				GCC_PREFIX_HEADER = VPNA/OC/Other/VPNAPrefixHeader.pch;
 				INFOPLIST_FILE = VPNA/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;

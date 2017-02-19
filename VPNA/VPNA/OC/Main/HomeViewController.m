@@ -70,8 +70,16 @@
 - (void)clickedFreeBtn:(UIButton *)sender
 {
     NSLog(@"免费试用");
-    FirstStepViewController *firstCtr = [[FirstStepViewController alloc] init];
-    [self.navigationController pushViewController:firstCtr animated:YES];
+    [[YWAFHttpManager shareHttpManager] requestPostURL:@"http://112.74.48.30:8080/order/newOrder"
+                                        withParameters:@{@"serviceId":@(1), @"userId":@(6), @"deviceId":@"111111111", @"day":@(0)}
+                                          withUserInfo:nil
+                                      withReqOverBlock:^(YWAFHttpResponse *response) {
+                                          [MBProgressHUD hideHUDForView:self.view animated:YES];
+                                          FirstStepViewController *firstCtr = [[FirstStepViewController alloc] init];
+                                          [self.navigationController pushViewController:firstCtr animated:YES];
+                                      }];
+    
+    
 }
 
 - (void)clickedChargeBtn:(UIButton *)sender
