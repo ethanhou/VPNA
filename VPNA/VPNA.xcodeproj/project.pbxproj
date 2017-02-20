@@ -71,6 +71,8 @@
 		D0A71D381E518F9100817F34 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0A71D371E518F9100817F34 /* BaseViewController.m */; };
 		D0DD5BEF1E52F0B7006358C6 /* ResetPwdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0DD5BEE1E52F0B7006358C6 /* ResetPwdViewController.m */; };
 		D0DD5BF21E52F827006358C6 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0DD5BF11E52F827006358C6 /* HomeViewController.m */; };
+		D0EB9EE81E5B142600896FDA /* PayModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D0EB9EE51E5B142600896FDA /* PayModel.m */; };
+		D0EB9EE91E5B142600896FDA /* PayService.m in Sources */ = {isa = PBXBuildFile; fileRef = D0EB9EE71E5B142600896FDA /* PayService.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -183,6 +185,10 @@
 		D0DD5BEE1E52F0B7006358C6 /* ResetPwdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResetPwdViewController.m; sourceTree = "<group>"; };
 		D0DD5BF01E52F827006358C6 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
 		D0DD5BF11E52F827006358C6 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
+		D0EB9EE41E5B142600896FDA /* PayModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PayModel.h; sourceTree = "<group>"; };
+		D0EB9EE51E5B142600896FDA /* PayModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PayModel.m; sourceTree = "<group>"; };
+		D0EB9EE61E5B142600896FDA /* PayService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PayService.h; sourceTree = "<group>"; };
+		D0EB9EE71E5B142600896FDA /* PayService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PayService.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -258,6 +264,10 @@
 				133562671E58594D00E4F133 /* CustomPaymentCell.m */,
 				133562691E585A9F00E4F133 /* BaseTableViewCell.h */,
 				1335626A1E585A9F00E4F133 /* BaseTableViewCell.m */,
+				D0EB9EE41E5B142600896FDA /* PayModel.h */,
+				D0EB9EE51E5B142600896FDA /* PayModel.m */,
+				D0EB9EE61E5B142600896FDA /* PayService.h */,
+				D0EB9EE71E5B142600896FDA /* PayService.m */,
 			);
 			name = cells;
 			path = OC/cells;
@@ -607,6 +617,7 @@
 				D007D45E1E55ABD90061B72D /* AFURLConnectionOperation.m in Sources */,
 				138FB9231E0F97E300D7A392 /* UIView+Extension.m in Sources */,
 				D007D4271E55A8620061B72D /* YWAFHttpManager.m in Sources */,
+				D0EB9EE91E5B142600896FDA /* PayService.m in Sources */,
 				D007D42C1E55A8980061B72D /* YWObject+Utils.m in Sources */,
 				D0670AD51E5459060049DC77 /* PayViewController.m in Sources */,
 				133562681E58594D00E4F133 /* CustomPaymentCell.m in Sources */,
@@ -634,6 +645,7 @@
 				D0A71D321E518A0400817F34 /* LoginViewController.m in Sources */,
 				1323CF2A1E56E2540053CD16 /* NSMutableAttributedString+Ext.m in Sources */,
 				D007D4281E55A8620061B72D /* YWAFHttpRequestCache.m in Sources */,
+				D0EB9EE81E5B142600896FDA /* PayModel.m in Sources */,
 				1323CF2E1E56E2540053CD16 /* NSRegularExpression+Ext.m in Sources */,
 				D0DD5BEF1E52F0B7006358C6 /* ResetPwdViewController.m in Sources */,
 				138FB90E1E0F97E300D7A392 /* main.m in Sources */,

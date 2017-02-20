@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "BaseTableViewCell.h"
 
-@interface CustomPaymentCell : BaseTableViewCell
+@interface CustomPaymentCell : BaseTableViewCell<UITextFieldDelegate>
 
 @property (nonatomic, strong) UILabel *label1;
 @property (nonatomic, strong) UILabel *label2;

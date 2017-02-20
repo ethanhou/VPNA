@@ -14,7 +14,7 @@
     _label1 = [[UILabel alloc] init];
     [_label1 setBackgroundColor:[UIColor clearColor]];
     [_label1 setFont:[UIFont systemFontOfSize:14.0]];
-    [_label1 setText:@"自定义"];
+    [_label1 setText:@"自定义 "];
     _label1.textAlignment = NSTextAlignmentCenter;
     [_label1 setTextColor:[UIColor whiteColor]];
     [self.contentView addSubview:_label1];
@@ -22,7 +22,7 @@
     _label2 = [[UILabel alloc] init];
     [_label2 setBackgroundColor:[UIColor clearColor]];
     [_label2 setFont:[UIFont systemFontOfSize:14.0]];
-    [_label2 setText:@"天 X 1元＝"];
+    [_label2 setText:@" 天 X 1元＝"];
     _label2.textAlignment = NSTextAlignmentCenter;
     [_label2 setTextColor:[UIColor whiteColor]];
     [self.contentView addSubview:_label2];
@@ -39,6 +39,8 @@
     _dayField.backgroundColor = [UIColor whiteColor];
     _dayField.borderStyle = UITextBorderStyleNone;
     _dayField.textAlignment = NSTextAlignmentCenter;
+    _dayField.keyboardType = UIKeyboardTypeNumberPad;
+    _dayField.delegate = self;
     [self.contentView addSubview:_dayField];
     
     _amountLabel = [[UILabel alloc] init];
@@ -57,23 +59,21 @@
     [self.contentView addSubview:_payBtn];
     
     [_label1 mas_makeConstraints:^(MASConstraintMaker *make){
-        make.left.mas_offset(20);
+        make.left.mas_greaterThanOrEqualTo(10);
         make.height.mas_equalTo(30);
-        make.width.mas_equalTo(50);
         make.centerY.mas_offset(0);
     }];
     
     [_dayField mas_makeConstraints:^(MASConstraintMaker *make){
         make.left.equalTo(_label1.mas_right).mas_offset(1);
         make.height.mas_equalTo(30);
-        make.width.mas_equalTo(50);
+        make.width.mas_equalTo(40);
         make.centerY.mas_offset(0);
     }];
     
     [_label2 mas_makeConstraints:^(MASConstraintMaker *make){
         make.left.equalTo(_dayField.mas_right).mas_offset(1);
         make.height.mas_equalTo(30);
-        make.width.mas_equalTo(76);
         make.centerY.mas_offset(0);
     }];
     
@@ -87,15 +87,13 @@
     [_label3 mas_makeConstraints:^(MASConstraintMaker *make){
         make.left.equalTo(_amountLabel.mas_right).mas_offset(2);
         make.height.mas_equalTo(30);
-        make.width.mas_equalTo(20);
         make.centerY.mas_offset(0);
     }];
     
     [_payBtn mas_makeConstraints:^(MASConstraintMaker *make){
         make.left.equalTo(_label3.mas_right).mas_offset(2);
         make.centerY.mas_offset(0);
-        make.height.mas_equalTo(40.f);
-        make.width.mas_equalTo(45);
+        make.width.height.mas_equalTo(30);
     }];
     
 }
@@ -104,6 +102,18 @@
     if (self.didClickBlock) {
         self.didClickBlock();
     }
+}
+
+- (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string
+{
+    NSInteger existedLength = textField.text.length;
+    NSInteger selectedLength = range.length;
+    NSInteger replaceLength = string.length;
+    if (existedLength - selectedLength + replaceLength > 3)
+    {
+        return NO;
+    }
+    return YES;
 }
 
 - (void)awakeFromNib {

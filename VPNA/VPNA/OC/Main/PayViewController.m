@@ -10,10 +10,11 @@
 #import "PaymentCell.h"
 #import "CustomPaymentCell.h"
 #import <AlipaySDK/AlipaySDK.h>
+#import "PayModel.h"
 
 @interface PayViewController ()<UITableViewDelegate,UITableViewDataSource>
 {
-    NSMutableArray *_dataArray;
+    NSArray *_dataArray;
 }
 @property(nonatomic,strong)UITableView *tableView;
 @property (nonatomic, strong) UIButton *nextBtn;
@@ -36,8 +37,10 @@
                                           [MBProgressHUD hideHUDForView:self.view animated:YES];
 
                                           if (response.ret == HTTPRetCodeOK) {
-                                              NSDictionary *dict = (NSDictionary *)response.data;
                                               
+                                              
+                                              PayModel *model = [[PayModel alloc] initWithDictionary:DictionaryValue(response.data)];
+                                              _dataArray = model.service;
                                           }
                                       }];
 }
@@ -51,10 +54,6 @@
 
     UIView *header = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 100, 30)];
     
-    _dataArray = [NSMutableArray arrayWithObjects:@{@"month":@(1),@"price":@(29)},
-                  @{@"month":@(1),@"price":@(29)},
-                  @{@"month":@(1),@"price":@(29)},
-                  @{@"month":@(1),@"price":@(29)},nil];
     _tableView = [[UITableView alloc] init];
     _tableView.delegate = self;
     _tableView.dataSource = self;
@@ -82,7 +81,7 @@
 }
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 5;
+    return _dataArray.count;
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {

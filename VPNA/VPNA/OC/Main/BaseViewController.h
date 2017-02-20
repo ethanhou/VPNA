@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import <Masonry.h>
+#import "YWObject+Utils.h"
 
 @interface CustomTextField : UITextField
 {
