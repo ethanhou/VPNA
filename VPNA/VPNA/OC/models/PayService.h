@@ -12,7 +12,7 @@
 @interface PayService : NSObject <NSCoding, NSCopying>
 
 @property (nonatomic, strong) NSString *serviceType;
-@property (nonatomic, strong) NSString *payServiceIdentifier;
+@property (nonatomic, strong) NSString *serviceId;
 @property (nonatomic, strong) NSString *supportContent;
 @property (nonatomic, strong) NSString *price;
 @property (nonatomic, strong) NSString *period;

@@ -25,7 +25,7 @@ NSString *const kPayServiceServiceName = @"serviceName";
 @implementation PayService
 
 @synthesize serviceType = _serviceType;
-@synthesize payServiceIdentifier = _payServiceIdentifier;
+@synthesize serviceId = _serviceId;
 @synthesize supportContent = _supportContent;
 @synthesize price = _price;
 @synthesize period = _period;
@@ -43,7 +43,7 @@ NSString *const kPayServiceServiceName = @"serviceName";
     // passed into the model class doesn't break the parsing.
     if (self && [dict isKindOfClass:[NSDictionary class]]) {
             self.serviceType = [self objectOrNilForKey:kPayServiceServiceType fromDictionary:dict];
-            self.payServiceIdentifier = [self objectOrNilForKey:kPayServiceId fromDictionary:dict];
+            self.serviceId = [self objectOrNilForKey:kPayServiceId fromDictionary:dict];
             self.supportContent = [self objectOrNilForKey:kPayServiceSupportContent fromDictionary:dict];
             self.price = [self objectOrNilForKey:kPayServicePrice fromDictionary:dict];
             self.period = [self objectOrNilForKey:kPayServicePeriod fromDictionary:dict];
@@ -58,7 +58,7 @@ NSString *const kPayServiceServiceName = @"serviceName";
 - (NSDictionary *)dictionaryRepresentation {
     NSMutableDictionary *mutableDict = [NSMutableDictionary dictionary];
     [mutableDict setValue:self.serviceType forKey:kPayServiceServiceType];
-    [mutableDict setValue:self.payServiceIdentifier forKey:kPayServiceId];
+    [mutableDict setValue:self.serviceId forKey:kPayServiceId];
     [mutableDict setValue:self.supportContent forKey:kPayServiceSupportContent];
     [mutableDict setValue:self.price forKey:kPayServicePrice];
     [mutableDict setValue:self.period forKey:kPayServicePeriod];
@@ -84,7 +84,7 @@ NSString *const kPayServiceServiceName = @"serviceName";
     self = [super init];
 
     self.serviceType = [aDecoder decodeObjectForKey:kPayServiceServiceType];
-    self.payServiceIdentifier = [aDecoder decodeObjectForKey:kPayServiceId];
+    self.serviceId = [aDecoder decodeObjectForKey:kPayServiceId];
     self.supportContent = [aDecoder decodeObjectForKey:kPayServiceSupportContent];
     self.price = [aDecoder decodeObjectForKey:kPayServicePrice];
     self.period = [aDecoder decodeObjectForKey:kPayServicePeriod];
@@ -96,7 +96,7 @@ NSString *const kPayServiceServiceName = @"serviceName";
 {
 
     [aCoder encodeObject:_serviceType forKey:kPayServiceServiceType];
-    [aCoder encodeObject:_payServiceIdentifier forKey:kPayServiceId];
+    [aCoder encodeObject:_serviceId forKey:kPayServiceId];
     [aCoder encodeObject:_supportContent forKey:kPayServiceSupportContent];
     [aCoder encodeObject:_price forKey:kPayServicePrice];
     [aCoder encodeObject:_period forKey:kPayServicePeriod];
@@ -111,7 +111,7 @@ NSString *const kPayServiceServiceName = @"serviceName";
     if (copy) {
 
         copy.serviceType = [self.serviceType copyWithZone:zone];
-        copy.payServiceIdentifier = [self.payServiceIdentifier copyWithZone:zone];
+        copy.serviceId = [self.serviceId copyWithZone:zone];
         copy.supportContent = [self.supportContent copyWithZone:zone];
         copy.price = [self.price copyWithZone:zone];
         copy.period = [self.period copyWithZone:zone];
