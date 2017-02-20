@@ -9,5 +9,5 @@
 #import <Foundation/Foundation.h>
 
 @interface PaymentManager : NSObject
-+ (void)alipayWith:()
+
 @end

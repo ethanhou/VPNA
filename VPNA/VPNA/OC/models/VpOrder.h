@@ -13,7 +13,7 @@
 
 @property (nonatomic, strong) NSString *deviceId;
 @property (nonatomic, strong) NSString *userId;
-@property (nonatomic, strong) NSString *vpOrderIdentifier;
+@property (nonatomic, strong) NSString *orderId;
 @property (nonatomic, strong) NSString *serviceId;
 @property (nonatomic, strong) NSString *payNumber;
 @property (nonatomic, strong) NSString *payTime;

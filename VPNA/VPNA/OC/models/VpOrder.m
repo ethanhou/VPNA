@@ -30,7 +30,7 @@ NSString *const kVpOrderOrderPrice = @"orderPrice";
 
 @synthesize deviceId = _deviceId;
 @synthesize userId = _userId;
-@synthesize vpOrderIdentifier = _vpOrderIdentifier;
+@synthesize orderId = _orderId;
 @synthesize serviceId = _serviceId;
 @synthesize payNumber = _payNumber;
 @synthesize payTime = _payTime;
@@ -52,7 +52,7 @@ NSString *const kVpOrderOrderPrice = @"orderPrice";
     if (self && [dict isKindOfClass:[NSDictionary class]]) {
             self.deviceId = [self objectOrNilForKey:kVpOrderDeviceId fromDictionary:dict];
             self.userId = [self objectOrNilForKey:kVpOrderUserId fromDictionary:dict];
-            self.vpOrderIdentifier = [self objectOrNilForKey:kVpOrderId fromDictionary:dict];
+            self.orderId = [self objectOrNilForKey:kVpOrderId fromDictionary:dict];
             self.serviceId = [self objectOrNilForKey:kVpOrderServiceId fromDictionary:dict];
             self.payNumber = [self objectOrNilForKey:kVpOrderPayNumber fromDictionary:dict];
             self.payTime = [self objectOrNilForKey:kVpOrderPayTime fromDictionary:dict];
@@ -71,7 +71,7 @@ NSString *const kVpOrderOrderPrice = @"orderPrice";
     NSMutableDictionary *mutableDict = [NSMutableDictionary dictionary];
     [mutableDict setValue:self.deviceId forKey:kVpOrderDeviceId];
     [mutableDict setValue:self.userId forKey:kVpOrderUserId];
-    [mutableDict setValue:self.vpOrderIdentifier forKey:kVpOrderId];
+    [mutableDict setValue:self.orderId forKey:kVpOrderId];
     [mutableDict setValue:self.serviceId forKey:kVpOrderServiceId];
     [mutableDict setValue:self.payNumber forKey:kVpOrderPayNumber];
     [mutableDict setValue:self.payTime forKey:kVpOrderPayTime];
@@ -101,7 +101,7 @@ NSString *const kVpOrderOrderPrice = @"orderPrice";
 
     self.deviceId = [aDecoder decodeObjectForKey:kVpOrderDeviceId];
     self.userId = [aDecoder decodeObjectForKey:kVpOrderUserId];
-    self.vpOrderIdentifier = [aDecoder decodeObjectForKey:kVpOrderId];
+    self.orderId = [aDecoder decodeObjectForKey:kVpOrderId];
     self.serviceId = [aDecoder decodeObjectForKey:kVpOrderServiceId];
     self.payNumber = [aDecoder decodeObjectForKey:kVpOrderPayNumber];
     self.payTime = [aDecoder decodeObjectForKey:kVpOrderPayTime];
@@ -117,7 +117,7 @@ NSString *const kVpOrderOrderPrice = @"orderPrice";
 
     [aCoder encodeObject:_deviceId forKey:kVpOrderDeviceId];
     [aCoder encodeObject:_userId forKey:kVpOrderUserId];
-    [aCoder encodeObject:_vpOrderIdentifier forKey:kVpOrderId];
+    [aCoder encodeObject:_orderId forKey:kVpOrderId];
     [aCoder encodeObject:_serviceId forKey:kVpOrderServiceId];
     [aCoder encodeObject:_payNumber forKey:kVpOrderPayNumber];
     [aCoder encodeObject:_payTime forKey:kVpOrderPayTime];
@@ -136,7 +136,7 @@ NSString *const kVpOrderOrderPrice = @"orderPrice";
 
         copy.deviceId = [self.deviceId copyWithZone:zone];
         copy.userId = [self.userId copyWithZone:zone];
-        copy.vpOrderIdentifier = [self.vpOrderIdentifier copyWithZone:zone];
+        copy.orderId = [self.orderId copyWithZone:zone];
         copy.serviceId = [self.serviceId copyWithZone:zone];
         copy.payNumber = [self.payNumber copyWithZone:zone];
         copy.payTime = [self.payTime copyWithZone:zone];
