@@ -42,6 +42,7 @@
 		133562EA1E5B173D00E4F133 /* PayService.m in Sources */ = {isa = PBXBuildFile; fileRef = 133562E81E5B173D00E4F133 /* PayService.m */; };
 		133562ED1E5B18E800E4F133 /* Config.m in Sources */ = {isa = PBXBuildFile; fileRef = 133562EC1E5B18E800E4F133 /* Config.m */; };
 		133562F01E5B19E200E4F133 /* UserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 133562EF1E5B19E200E4F133 /* UserModel.m */; };
+		133562F31E5B1DF900E4F133 /* PaymentManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 133562F21E5B1DF900E4F133 /* PaymentManager.m */; };
 		138FB90E1E0F97E300D7A392 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 138FB90D1E0F97E300D7A392 /* main.m */; };
 		138FB9111E0F97E300D7A392 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 138FB9101E0F97E300D7A392 /* AppDelegate.m */; };
 		138FB9151E0F97E300D7A392 /* CommonlyConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 138FB9141E0F97E300D7A392 /* CommonlyConst.m */; };
@@ -135,6 +136,8 @@
 		133562EC1E5B18E800E4F133 /* Config.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Config.m; sourceTree = "<group>"; };
 		133562EE1E5B19E200E4F133 /* UserModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserModel.h; sourceTree = "<group>"; };
 		133562EF1E5B19E200E4F133 /* UserModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserModel.m; sourceTree = "<group>"; };
+		133562F11E5B1DF900E4F133 /* PaymentManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PaymentManager.h; sourceTree = "<group>"; };
+		133562F21E5B1DF900E4F133 /* PaymentManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PaymentManager.m; sourceTree = "<group>"; };
 		138FB9091E0F97E300D7A392 /* VPNA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VPNA.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		138FB90D1E0F97E300D7A392 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		138FB90F1E0F97E300D7A392 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -297,6 +300,8 @@
 				133562C71E5AEAFE00E4F133 /* UUID.m */,
 				1335626D1E5944C000E4F133 /* DataManager.h */,
 				1335626E1E5944C000E4F133 /* DataManager.m */,
+				133562F11E5B1DF900E4F133 /* PaymentManager.h */,
+				133562F21E5B1DF900E4F133 /* PaymentManager.m */,
 			);
 			name = models;
 			path = OC/models;
@@ -642,6 +647,7 @@
 				D0670AD21E5443120049DC77 /* ThirdStepViewController.m in Sources */,
 				1323CF351E56ED9F0053CD16 /* PaymentCell.m in Sources */,
 				D0670ACC1E5441680049DC77 /* UILabel+YBAttributeTextTapAction.m in Sources */,
+				133562F31E5B1DF900E4F133 /* PaymentManager.m in Sources */,
 				D0A71D381E518F9100817F34 /* BaseViewController.m in Sources */,
 				1335626B1E585A9F00E4F133 /* BaseTableViewCell.m in Sources */,
 				1323CF2C1E56E2540053CD16 /* NSMutableString+Ext.m in Sources */,

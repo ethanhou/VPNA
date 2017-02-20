@@ -12,7 +12,7 @@
 @interface UserModel : NSObject <NSCoding, NSCopying>
 
 @property (nonatomic, strong) NSString *password;
-@property (nonatomic, assign) double internalUserModelIdentifier;
+@property (nonatomic, strong) NSString *userId;
 @property (nonatomic, strong) NSString *mobile;
 @property (nonatomic, strong) NSString *deviceId;
 @property (nonatomic, assign) double createTime;

@@ -25,7 +25,7 @@ NSString *const kUserModelTerminal = @"terminal";
 @implementation UserModel
 
 @synthesize password = _password;
-@synthesize internalUserModelIdentifier = _internalUserModelIdentifier;
+@synthesize userId = _userId;
 @synthesize mobile = _mobile;
 @synthesize deviceId = _deviceId;
 @synthesize createTime = _createTime;
@@ -43,7 +43,7 @@ NSString *const kUserModelTerminal = @"terminal";
     // passed into the model class doesn't break the parsing.
     if (self && [dict isKindOfClass:[NSDictionary class]]) {
             self.password = [self objectOrNilForKey:kUserModelPassword fromDictionary:dict];
-            self.internalUserModelIdentifier = [[self objectOrNilForKey:kUserModelId fromDictionary:dict] doubleValue];
+            self.userId = [self objectOrNilForKey:kUserModelId fromDictionary:dict];
             self.mobile = [self objectOrNilForKey:kUserModelMobile fromDictionary:dict];
             self.deviceId = [self objectOrNilForKey:kUserModelDeviceId fromDictionary:dict];
             self.createTime = [[self objectOrNilForKey:kUserModelCreateTime fromDictionary:dict] doubleValue];
@@ -58,7 +58,7 @@ NSString *const kUserModelTerminal = @"terminal";
 - (NSDictionary *)dictionaryRepresentation {
     NSMutableDictionary *mutableDict = [NSMutableDictionary dictionary];
     [mutableDict setValue:self.password forKey:kUserModelPassword];
-    [mutableDict setValue:[NSNumber numberWithDouble:self.internalUserModelIdentifier] forKey:kUserModelId];
+    [mutableDict setValue:self.userId forKey:kUserModelId];
     [mutableDict setValue:self.mobile forKey:kUserModelMobile];
     [mutableDict setValue:self.deviceId forKey:kUserModelDeviceId];
     [mutableDict setValue:[NSNumber numberWithDouble:self.createTime] forKey:kUserModelCreateTime];
@@ -84,7 +84,7 @@ NSString *const kUserModelTerminal = @"terminal";
     self = [super init];
 
     self.password = [aDecoder decodeObjectForKey:kUserModelPassword];
-    self.internalUserModelIdentifier = [aDecoder decodeDoubleForKey:kUserModelId];
+    self.userId = [aDecoder decodeObjectForKey:kUserModelId];
     self.mobile = [aDecoder decodeObjectForKey:kUserModelMobile];
     self.deviceId = [aDecoder decodeObjectForKey:kUserModelDeviceId];
     self.createTime = [aDecoder decodeDoubleForKey:kUserModelCreateTime];
@@ -96,7 +96,7 @@ NSString *const kUserModelTerminal = @"terminal";
 {
 
     [aCoder encodeObject:_password forKey:kUserModelPassword];
-    [aCoder encodeDouble:_internalUserModelIdentifier forKey:kUserModelId];
+    [aCoder encodeObject:_userId forKey:kUserModelId];
     [aCoder encodeObject:_mobile forKey:kUserModelMobile];
     [aCoder encodeObject:_deviceId forKey:kUserModelDeviceId];
     [aCoder encodeDouble:_createTime forKey:kUserModelCreateTime];
@@ -111,7 +111,7 @@ NSString *const kUserModelTerminal = @"terminal";
     if (copy) {
 
         copy.password = [self.password copyWithZone:zone];
-        copy.internalUserModelIdentifier = self.internalUserModelIdentifier;
+        copy.userId = [self.userId copyWithZone:zone];
         copy.mobile = [self.mobile copyWithZone:zone];
         copy.deviceId = [self.deviceId copyWithZone:zone];
         copy.createTime = self.createTime;
