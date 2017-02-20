@@ -69,17 +69,23 @@
 
 - (void)clickedFreeBtn:(UIButton *)sender
 {
+    [MBProgressHUD showHUDAddedTo:self.view animated:YES];
     NSLog(@"免费试用");
     [[YWAFHttpManager shareHttpManager] requestPostURL:@"http://112.74.48.30:8080/order/newOrder"
-                                        withParameters:@{@"serviceId":@(1), @"userId":@(6), @"deviceId":@"111111111", @"day":@(0)}
+                                        withParameters:@{@"serviceId":@(1), @"userId":@([DataManager shareManager].userId), @"deviceId":[DataManager shareManager].deviceId, @"day":@(0)}
                                           withUserInfo:nil
                                       withReqOverBlock:^(YWAFHttpResponse *response) {
+                                          
+                                          if (response.ret == HTTPRetCodeOK) {
+                                              NSDictionary *dict = (NSDictionary *)response.data;
+                                              NSString *url = [NSString stringWithFormat:@"%@/%@.p12",dict[@"VpOrder"][@"p12"], dict[@"VpOrder"][@"payNumber"]];
+                                              NSURL *p12 = [NSURL URLWithString:url];
+                                              [[UIApplication sharedApplication] openURL:p12];
+                                          }
                                           [MBProgressHUD hideHUDForView:self.view animated:YES];
-                                          FirstStepViewController *firstCtr = [[FirstStepViewController alloc] init];
-                                          [self.navigationController pushViewController:firstCtr animated:YES];
+//                                          FirstStepViewController *firstCtr = [[FirstStepViewController alloc] init];
+//                                          [self.navigationController pushViewController:firstCtr animated:YES];
                                       }];
-    
-    
 }
 
 - (void)clickedChargeBtn:(UIButton *)sender
@@ -88,6 +94,7 @@
     PayViewController *payCtr = [[PayViewController alloc] init];
     [self.navigationController pushViewController:payCtr animated:YES];
 }
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.

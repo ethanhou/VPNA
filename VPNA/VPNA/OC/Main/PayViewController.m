@@ -9,6 +9,8 @@
 #import "PayViewController.h"
 #import "PaymentCell.h"
 #import "CustomPaymentCell.h"
+#import <AlipaySDK/AlipaySDK.h>
+
 @interface PayViewController ()<UITableViewDelegate,UITableViewDataSource>
 {
     NSMutableArray *_dataArray;
@@ -26,8 +28,24 @@
                                                       reuseIdentifier:nil];
 }
 
+- (void)requestAllService {
+    [[YWAFHttpManager shareHttpManager] requestPostURL:@"http://112.74.48.30:8080/service/allService"
+                                        withParameters:nil
+                                          withUserInfo:nil
+                                      withReqOverBlock:^(YWAFHttpResponse *response) {
+                                          [MBProgressHUD hideHUDForView:self.view animated:YES];
+
+                                          if (response.ret == HTTPRetCodeOK) {
+                                              NSDictionary *dict = (NSDictionary *)response.data;
+                                              
+                                          }
+                                      }];
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    [self requestAllService];
     
     [self initCustomPaymentCell];
 

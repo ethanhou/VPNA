@@ -8,11 +8,16 @@
 
 #ifndef QWPrefixHeader_pch
 #define QWPrefixHeader_pch
+
+#define  KEY_USERNAME_PASSWORD @"com.company.app.usernamepassword"
+#define  KEY_USERNAME @"com.company.app.username"
+#define  KEY_PASSWORD @"com.company.app.password"
+
 #import "CommonlyMacro.h"
 
 #import "UIView+Extension.h"
 #import "Masonry.h"
-
+#import "DataManager.h"
 #import "CommonlyConst.h"
 #import "YWAFHttpManager.h"
 #import "MBProgressHUD.h"

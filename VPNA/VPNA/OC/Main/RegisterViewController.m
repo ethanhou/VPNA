@@ -97,8 +97,14 @@
                                           withUserInfo:nil
                                       withReqOverBlock:^(YWAFHttpResponse *response) {
                                           [MBProgressHUD hideHUDForView:self.view animated:YES];
-                                          HomeViewController *homeCtr = [[HomeViewController alloc] init];
-                                          [self.navigationController pushViewController:homeCtr animated:YES];
+                                          
+                                          if (response.ret == HTTPRetCodeOK) {
+                                              NSDictionary *data = (NSDictionary *)response.data;
+                                              [[DataManager shareManager] configUserDict:data[@"user"]];
+                                              
+                                              HomeViewController *homeCtr = [[HomeViewController alloc] init];
+                                              [self.navigationController pushViewController:homeCtr animated:YES];
+                                          }                                          
                                       }];
 }
 
