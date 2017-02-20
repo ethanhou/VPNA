@@ -46,7 +46,7 @@
                                               for (int i=0; i<model.service.count; i++) {
                                                   
                                                   PayService *_service = model.service[i];
-                                                  if (_service.serviceType == 1) {
+                                                  if ([_service.serviceType integerValue] == 1) {
                                                       
                                                       [tmpData removeObject:_service];
                                                   }
@@ -118,7 +118,7 @@
         WS(weakself);
         payCell.didClickBlock = ^(NSInteger index) {
             
-            [weakself createPayOrder:model.payServiceIdentifier];
+            [weakself createPayOrder:model.serviceId];
         };
 
     }
