@@ -37,6 +37,11 @@
 		133562D41E5AEC9600E4F133 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 133562D31E5AEC9600E4F133 /* QuartzCore.framework */; };
 		133562D61E5AEC9D00E4F133 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 133562D51E5AEC9D00E4F133 /* CoreText.framework */; };
 		133562D81E5AECBA00E4F133 /* CoreMotion.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 133562D71E5AECBA00E4F133 /* CoreMotion.framework */; };
+		133562E41E5B171300E4F133 /* VpOrder.m in Sources */ = {isa = PBXBuildFile; fileRef = 133562E21E5B171300E4F133 /* VpOrder.m */; };
+		133562E91E5B173D00E4F133 /* PayModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 133562E61E5B173D00E4F133 /* PayModel.m */; };
+		133562EA1E5B173D00E4F133 /* PayService.m in Sources */ = {isa = PBXBuildFile; fileRef = 133562E81E5B173D00E4F133 /* PayService.m */; };
+		133562ED1E5B18E800E4F133 /* Config.m in Sources */ = {isa = PBXBuildFile; fileRef = 133562EC1E5B18E800E4F133 /* Config.m */; };
+		133562F01E5B19E200E4F133 /* UserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 133562EF1E5B19E200E4F133 /* UserModel.m */; };
 		138FB90E1E0F97E300D7A392 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 138FB90D1E0F97E300D7A392 /* main.m */; };
 		138FB9111E0F97E300D7A392 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 138FB9101E0F97E300D7A392 /* AppDelegate.m */; };
 		138FB9151E0F97E300D7A392 /* CommonlyConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 138FB9141E0F97E300D7A392 /* CommonlyConst.m */; };
@@ -71,8 +76,6 @@
 		D0A71D381E518F9100817F34 /* BaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0A71D371E518F9100817F34 /* BaseViewController.m */; };
 		D0DD5BEF1E52F0B7006358C6 /* ResetPwdViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0DD5BEE1E52F0B7006358C6 /* ResetPwdViewController.m */; };
 		D0DD5BF21E52F827006358C6 /* HomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D0DD5BF11E52F827006358C6 /* HomeViewController.m */; };
-		D0EB9EE81E5B142600896FDA /* PayModel.m in Sources */ = {isa = PBXBuildFile; fileRef = D0EB9EE51E5B142600896FDA /* PayModel.m */; };
-		D0EB9EE91E5B142600896FDA /* PayService.m in Sources */ = {isa = PBXBuildFile; fileRef = D0EB9EE71E5B142600896FDA /* PayService.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -122,6 +125,16 @@
 		133562D31E5AEC9600E4F133 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		133562D51E5AEC9D00E4F133 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
 		133562D71E5AECBA00E4F133 /* CoreMotion.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreMotion.framework; path = System/Library/Frameworks/CoreMotion.framework; sourceTree = SDKROOT; };
+		133562E11E5B171300E4F133 /* VpOrder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VpOrder.h; sourceTree = "<group>"; };
+		133562E21E5B171300E4F133 /* VpOrder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VpOrder.m; sourceTree = "<group>"; };
+		133562E51E5B173D00E4F133 /* PayModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PayModel.h; sourceTree = "<group>"; };
+		133562E61E5B173D00E4F133 /* PayModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PayModel.m; sourceTree = "<group>"; };
+		133562E71E5B173D00E4F133 /* PayService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PayService.h; sourceTree = "<group>"; };
+		133562E81E5B173D00E4F133 /* PayService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PayService.m; sourceTree = "<group>"; };
+		133562EB1E5B18E800E4F133 /* Config.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Config.h; sourceTree = "<group>"; };
+		133562EC1E5B18E800E4F133 /* Config.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Config.m; sourceTree = "<group>"; };
+		133562EE1E5B19E200E4F133 /* UserModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserModel.h; sourceTree = "<group>"; };
+		133562EF1E5B19E200E4F133 /* UserModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserModel.m; sourceTree = "<group>"; };
 		138FB9091E0F97E300D7A392 /* VPNA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VPNA.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		138FB90D1E0F97E300D7A392 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		138FB90F1E0F97E300D7A392 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -185,10 +198,6 @@
 		D0DD5BEE1E52F0B7006358C6 /* ResetPwdViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResetPwdViewController.m; sourceTree = "<group>"; };
 		D0DD5BF01E52F827006358C6 /* HomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HomeViewController.h; sourceTree = "<group>"; };
 		D0DD5BF11E52F827006358C6 /* HomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HomeViewController.m; sourceTree = "<group>"; };
-		D0EB9EE41E5B142600896FDA /* PayModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PayModel.h; sourceTree = "<group>"; };
-		D0EB9EE51E5B142600896FDA /* PayModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PayModel.m; sourceTree = "<group>"; };
-		D0EB9EE61E5B142600896FDA /* PayService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PayService.h; sourceTree = "<group>"; };
-		D0EB9EE71E5B142600896FDA /* PayService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PayService.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -264,10 +273,6 @@
 				133562671E58594D00E4F133 /* CustomPaymentCell.m */,
 				133562691E585A9F00E4F133 /* BaseTableViewCell.h */,
 				1335626A1E585A9F00E4F133 /* BaseTableViewCell.m */,
-				D0EB9EE41E5B142600896FDA /* PayModel.h */,
-				D0EB9EE51E5B142600896FDA /* PayModel.m */,
-				D0EB9EE61E5B142600896FDA /* PayService.h */,
-				D0EB9EE71E5B142600896FDA /* PayService.m */,
 			);
 			name = cells;
 			path = OC/cells;
@@ -276,6 +281,16 @@
 		1335626C1E59448000E4F133 /* models */ = {
 			isa = PBXGroup;
 			children = (
+				133562EE1E5B19E200E4F133 /* UserModel.h */,
+				133562EF1E5B19E200E4F133 /* UserModel.m */,
+				133562EB1E5B18E800E4F133 /* Config.h */,
+				133562EC1E5B18E800E4F133 /* Config.m */,
+				133562E51E5B173D00E4F133 /* PayModel.h */,
+				133562E61E5B173D00E4F133 /* PayModel.m */,
+				133562E71E5B173D00E4F133 /* PayService.h */,
+				133562E81E5B173D00E4F133 /* PayService.m */,
+				133562E11E5B171300E4F133 /* VpOrder.h */,
+				133562E21E5B171300E4F133 /* VpOrder.m */,
 				133562C41E5AEAFE00E4F133 /* KeyChainStore.h */,
 				133562C51E5AEAFE00E4F133 /* KeyChainStore.m */,
 				133562C61E5AEAFE00E4F133 /* UUID.h */,
@@ -616,8 +631,9 @@
 				1323CF0B1E56DF160053CD16 /* CountDownViewController.m in Sources */,
 				D007D45E1E55ABD90061B72D /* AFURLConnectionOperation.m in Sources */,
 				138FB9231E0F97E300D7A392 /* UIView+Extension.m in Sources */,
+				133562F01E5B19E200E4F133 /* UserModel.m in Sources */,
+				133562E91E5B173D00E4F133 /* PayModel.m in Sources */,
 				D007D4271E55A8620061B72D /* YWAFHttpManager.m in Sources */,
-				D0EB9EE91E5B142600896FDA /* PayService.m in Sources */,
 				D007D42C1E55A8980061B72D /* YWObject+Utils.m in Sources */,
 				D0670AD51E5459060049DC77 /* PayViewController.m in Sources */,
 				133562681E58594D00E4F133 /* CustomPaymentCell.m in Sources */,
@@ -631,6 +647,7 @@
 				1323CF2C1E56E2540053CD16 /* NSMutableString+Ext.m in Sources */,
 				133562C91E5AEAFE00E4F133 /* UUID.m in Sources */,
 				138FB9251E0F97E300D7A392 /* QWTabBarController.m in Sources */,
+				133562E41E5B171300E4F133 /* VpOrder.m in Sources */,
 				138FB9111E0F97E300D7A392 /* AppDelegate.m in Sources */,
 				1323CF301E56E2540053CD16 /* NSThread+Ext.m in Sources */,
 				133562C81E5AEAFE00E4F133 /* KeyChainStore.m in Sources */,
@@ -645,14 +662,15 @@
 				D0A71D321E518A0400817F34 /* LoginViewController.m in Sources */,
 				1323CF2A1E56E2540053CD16 /* NSMutableAttributedString+Ext.m in Sources */,
 				D007D4281E55A8620061B72D /* YWAFHttpRequestCache.m in Sources */,
-				D0EB9EE81E5B142600896FDA /* PayModel.m in Sources */,
 				1323CF2E1E56E2540053CD16 /* NSRegularExpression+Ext.m in Sources */,
 				D0DD5BEF1E52F0B7006358C6 /* ResetPwdViewController.m in Sources */,
 				138FB90E1E0F97E300D7A392 /* main.m in Sources */,
 				D0670ACF1E5443050049DC77 /* SecondStepViewController.m in Sources */,
+				133562EA1E5B173D00E4F133 /* PayService.m in Sources */,
 				D007D4291E55A8620061B72D /* YWAFHttpResponse.m in Sources */,
 				138FB91B1E0F97E300D7A392 /* QWBaseViewController.m in Sources */,
 				1323CF291E56E2540053CD16 /* NSMutableArray+Ext.m in Sources */,
+				133562ED1E5B18E800E4F133 /* Config.m in Sources */,
 				138FB91E1E0F97E300D7A392 /* QWNavitionController.m in Sources */,
 				D0DD5BF21E52F827006358C6 /* HomeViewController.m in Sources */,
 			);
