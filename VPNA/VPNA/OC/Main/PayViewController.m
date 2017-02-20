@@ -11,6 +11,8 @@
 #import "CustomPaymentCell.h"
 #import <AlipaySDK/AlipaySDK.h>
 #import "PayModel.h"
+#import "PayService.h"
+#import "DataManager.h"
 
 @interface PayViewController ()<UITableViewDelegate,UITableViewDataSource>
 {
@@ -40,7 +42,17 @@
                                               
                                               
                                               PayModel *model = [[PayModel alloc] initWithDictionary:DictionaryValue(response.data)];
-                                              _dataArray = model.service;
+                                              NSMutableArray *tmpData = [NSMutableArray arrayWithArray:model.service];
+                                              for (int i=0; i<model.service.count; i++) {
+                                                  
+                                                  PayService *_service = model.service[i];
+                                                  if (_service.serviceType == 1) {
+                                                      
+                                                      [tmpData removeObject:_service];
+                                                  }
+                                              }
+                                              _dataArray = [NSArray arrayWithArray:tmpData];
+                                              [self.tableView reloadData];
                                           }
                                       }];
 }
@@ -81,7 +93,7 @@
 }
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return _dataArray.count;
+    return _dataArray.count+1;
 }
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
@@ -89,6 +101,8 @@
     if (indexPath.row == _dataArray.count) {
         self.customPaymentCell.index = indexPath.row;
         cell = self.customPaymentCell;
+        
+        
     } else {
         static NSString *identi = @"Cell";
         cell = [tableView dequeueReusableCellWithIdentifier:identi];
@@ -98,8 +112,13 @@
         }
         PaymentCell *payCell = (PaymentCell *)cell;
         payCell.index = indexPath.row;
+        PayService *model = _dataArray[indexPath.row];
+        NSString *text = [NSString stringWithFormat:@"%@ = %@元",model.serviceName,model.price];
+        [payCell.payInfoLabel setText:text];
+        WS(weakself);
         payCell.didClickBlock = ^(NSInteger index) {
             
+            [weakself createPayOrder:model.payServiceIdentifier];
         };
 
     }
@@ -107,6 +126,49 @@
     cell.selectionStyle = UITableViewCellSelectionStyleNone;
 
     return cell;
+}
+
+- (void)createPayOrder:(NSString *)_serviceID
+{
+    
+    WS(weakself);
+    NSMutableDictionary *params = [NSMutableDictionary dictionary];
+    [params setObject:StringValue(_serviceID) forKey:@"serviceId"];
+    [params setObject:StringValue([DataManager shareManager].userId) forKey:@"userId"];
+    [params setObject:StringValue([DataManager shareManager].deviceId) forKey:@"deviceId"];
+    [[YWAFHttpManager shareHttpManager] requestPostURL:@"http://112.74.48.30:8080/order/newOrder"
+                                        withParameters:params
+                                          withUserInfo:nil
+                                      withReqOverBlock:^(YWAFHttpResponse *response) {
+                                          [MBProgressHUD hideHUDForView:self.view animated:YES];
+                                          
+                                          if (response.ret == HTTPRetCodeOK) {
+                                              
+                                              NSDictionary *dict = DictionaryValue(response.data);
+                                              NSDictionary *_order = DictionaryValue(dict[@"VpOrder"]);
+                                              [weakself gotoPay:_order[@"id"]];
+                                              NSLog(@"response:%@",response.data);
+                                              
+                                          }
+                                      }];
+}
+
+- (void)gotoPay:(NSString *)orderId
+{
+    NSMutableDictionary *params = [NSMutableDictionary dictionary];
+    [params setObject:StringValue(orderId) forKey:@"orderId"];
+    [[YWAFHttpManager shareHttpManager] requestPostURL:@"http://112.74.48.30:8080/order/payOrder"
+                                        withParameters:params
+                                          withUserInfo:nil
+                                      withReqOverBlock:^(YWAFHttpResponse *response) {
+                                          [MBProgressHUD hideHUDForView:self.view animated:YES];
+                                          
+                                          if (response.ret == HTTPRetCodeOK) {
+                                              
+                                              NSLog(@"response:%@",response.data);
+                                              
+                                          }
+                                      }];
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

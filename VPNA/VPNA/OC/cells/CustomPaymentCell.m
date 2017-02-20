@@ -115,6 +115,11 @@
     }
     return YES;
 }
+- (void)textFieldDidEndEditing:(UITextField *)textField
+{
+    NSLog(@"te:%@",textField.text);
+    _amountLabel.text = textField.text;
+}
 
 - (void)awakeFromNib {
     [super awakeFromNib];

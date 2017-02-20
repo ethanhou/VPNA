@@ -72,7 +72,7 @@
     [MBProgressHUD showHUDAddedTo:self.view animated:YES];
     NSLog(@"免费试用");
     [[YWAFHttpManager shareHttpManager] requestPostURL:@"http://112.74.48.30:8080/order/newOrder"
-                                        withParameters:@{@"serviceId":@(1), @"userId":@([DataManager shareManager].userId), @"deviceId":[DataManager shareManager].deviceId, @"day":@(0)}
+                                        withParameters:@{@"serviceId":@(1), @"userId":[DataManager shareManager].userId, @"deviceId":[DataManager shareManager].deviceId, @"day":@(0)}
                                           withUserInfo:nil
                                       withReqOverBlock:^(YWAFHttpResponse *response) {
                                           

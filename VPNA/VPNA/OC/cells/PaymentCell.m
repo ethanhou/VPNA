@@ -16,7 +16,6 @@
     _payInfoLabel = [[UILabel alloc] init];
     [_payInfoLabel setBackgroundColor:[UIColor clearColor]];
     [_payInfoLabel setFont:[UIFont systemFontOfSize:16.0]];
-    [_payInfoLabel setText:@"一个月 ＝ 29元"];
     _payInfoLabel.textAlignment = NSTextAlignmentLeft;
     [_payInfoLabel setTextColor:[UIColor whiteColor]];
     [self.contentView addSubview:_payInfoLabel];

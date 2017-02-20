@@ -10,7 +10,7 @@
 
 @interface DataManager : NSObject
 
-@property (nonatomic, assign) NSInteger userId;
+@property (nonatomic, copy) NSString *userId;
 @property (nonatomic, copy) NSString *mobile;
 @property (nonatomic, copy) NSString *password;
 @property (nonatomic, copy) NSString *deviceId;
